@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>The Revealed Cosmos Studio — Narrative Systems & Story-World Clarity</title>
-  <meta name="description" content="Narrative systems, worldbuilding structure, story-world clarity, development documentation, pitch support, and visual-narrative direction for story-driven projects." />
-  <meta name="keywords" content="narrative systems consultant, worldbuilding consultant, development documentation, story bible, quest framework, lore documentation, RPG quest design, visual novel writer, tone guide, pitch materials, narrative design support" />
-  <meta property="og:title" content="The Revealed Cosmos Studio" />
-  <meta property="og:description" content="Narrative systems, worldbuilding structure, story-world clarity, development documentation, pitch support, and visual-narrative direction for story-driven projects." />
+  <title>Revealed Cosmos Archive | Luna Ghani / The Price of Flesh</title>
+  <meta name="description" content="Revealed Cosmos Archive is a public hub for original story worlds, cinematic fragments, music, comics, and visual signals by Aaron." />
+  <meta name="keywords" content="Revealed Cosmos Archive, Luna Ghani, The Price of Flesh, original story worlds, cinematic fragments, archive hub, visual signals, music, comics" />
+  <meta property="og:title" content="Revealed Cosmos Archive" />
+  <meta property="og:description" content="Original story worlds translated into cinematic fragments, music, comics, and visual signals." />
   <meta property="og:image" content="hero_brand.jpg" />
   <meta property="og:type" content="website" />
   <style>
@@ -18,7 +18,7 @@
       --text: #f4f1ea;
       --muted: #c9c2b8;
       --soft: #90887d;
-      --gold: #c3a96a;
+      --gold: #d09a64;
       --blue: #76c7e8;
       --line: rgba(255,255,255,.11);
       --line2: rgba(255,255,255,.18);
@@ -170,6 +170,43 @@
       display: block;
       border-radius: clamp(12px, 1.5vw, 18px);
       filter: saturate(.96) contrast(1.04) brightness(.9);
+    }
+
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: clamp(12px, 1.5vw, 18px);
+      border: 1px solid rgba(208,154,100,.32);
+      background:
+        linear-gradient(180deg, rgba(5,6,8,.28), rgba(5,6,8,.72)),
+        radial-gradient(circle at 52% 35%, rgba(208,154,100,.18), transparent 38%),
+        url('hero_brand.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0 0 90px rgba(0,0,0,.62);
+      overflow: hidden;
+    }
+
+    .video-placeholder strong {
+      display: block;
+      color: var(--text);
+      font-size: clamp(26px, 3vw, 44px);
+      line-height: 1.05;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .video-placeholder span {
+      display: block;
+      color: var(--gold);
+      margin-top: 12px;
+      font-size: clamp(13px, .4vw + 12px, 17px);
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
     }
 
     .hero-copy { max-width: 960px; }
@@ -345,6 +382,13 @@
       overflow: visible;
     }
 
+    .card-visual.luna { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('keyframe_city_spy.jpg'); }
+    .card-visual.flesh { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('psychopunk_tone_cover.jpg'); }
+    .card-visual.signal { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('hero_brand.jpg'); }
+    .card-visual.memory { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('narrative_systems_cover.jpg'); }
+    .card-visual.comic { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('artifact_quest_cover.jpg'); }
+    .card-visual.music { background-image: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.34)), url('atlas3i_cover.jpg'); }
+
     .transformation-snapshot h3 {
       font-size: clamp(22px, 1vw + 20px, 30px);
       line-height: 1.14;
@@ -448,7 +492,7 @@
       margin-top: 26px;
     }
 
-    #project-fit-review .process-grid {
+    #story-depth .process-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
@@ -616,7 +660,7 @@
     @media (max-width: 960px) {
       .split, .contact-grid, .fit-grid { grid-template-columns: 1fr; }
       .portfolio-grid, .services-grid, .pain-points, .outcome-grid, .process-grid { grid-template-columns: 1fr 1fr; }
-      #project-fit-review .process-grid { grid-template-columns: 1fr 1fr; }
+      #story-depth .process-grid { grid-template-columns: 1fr 1fr; }
       .hero { padding: 54px 0 62px; }
       .services-cta, .hero-review-note, .contract-cta { display: grid; justify-items: start; }
       .hero-review-note .button, .services-cta .button, .contract-cta .button { width: auto; min-width: 0; max-width: 340px; }
@@ -649,7 +693,7 @@
       .support-note { font-size: 15.5px; }
       .micro-line { font-size: 12px; }
       .portfolio-grid, .services-grid, .pain-points, .outcome-grid, .process-grid { grid-template-columns: 1fr; }
-      #project-fit-review .process-grid { grid-template-columns: 1fr; }
+      #story-depth .process-grid { grid-template-columns: 1fr; }
       .transformation-snapshot { padding: 24px 20px; }
       .transformation-snapshot .process-grid { grid-template-columns: 1fr; }
       .transformation-proof ul { columns: 1; }
@@ -677,16 +721,17 @@
 <body>
   <header>
     <div class="nav">
-      <a class="brand" href="#top" aria-label="Return to the top of The Revealed Cosmos Studio homepage">
-        <div class="logo">The Revealed Cosmos Studio</div>
-        <div class="brand-subtitle">Narrative Systems & Development Documentation</div>
+      <a class="brand" href="#top" aria-label="Return to the top of the Revealed Cosmos Archive">
+        <div class="logo">Revealed Cosmos Archive</div>
+        <div class="brand-subtitle">Original story worlds / cinematic fragments / music / visual signals</div>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#fragment">Fragment</a>
+        <a href="#archive">Archive</a>
+        <a href="#signals">Signals</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact" data-help="Not sure yet" data-cta="start-project-conversation">Start a Project Conversation</a>
+        <a href="#connect">Connect</a>
+        <a class="nav-cta" href="#fragment" data-cta="watch-the-fragment">Watch the Fragment</a>
       </nav>
     </div>
   </header>
@@ -694,206 +739,180 @@
   <main>
     <section id="top" class="hero">
       <div class="wrap hero-inner">
-        <aside class="hero-card" aria-label="The Revealed Cosmos Studio brand visual">
-          <img src="hero_brand.jpg" alt="The Revealed Cosmos Studio cosmic brand visual" />
+        <aside class="hero-card" aria-label="Video placeholder for Luna Ghani / The Price of Flesh">
+          <div class="video-placeholder" role="img" aria-label="Video incoming: Luna Ghani / The Price of Flesh">
+            <div>
+              <span>Current Fragment</span>
+              <strong>Video Incoming</strong>
+              <span>Luna Ghani / The Price of Flesh</span>
+            </div>
+          </div>
         </aside>
         <div class="hero-copy">
-          <div class="eyebrow">Narrative Systems • Worldbuilding Structure • Visual-Narrative Direction</div>
-          <h1>Turn story-world material into clearer systems.</h1>
-          <p class="lead">The Revealed Cosmos Studio helps story-driven games, RPG/VN projects, cinematic IP, writers, and serious creators shape lore notes, factions, quests, characters, visuals, tone direction, and pitch ideas into clearer story-world structure, documentation, and creative direction.</p>
-          <p class="support-note">Useful when a project has strong ideas, but the material is hard to organize, explain, revise, pitch, or build from.</p>
-          <div class="pain-points" aria-label="Common problems solved">
-            <div class="mini-card"><strong>World logic</strong><span>Rules, factions, history, pressure, and setting logic become easier to explain and use.</span></div>
-            <div class="mini-card"><strong>Quest structure</strong><span>Objectives, branches, stakes, outcomes, and player-facing logic become clearer.</span></div>
-            <div class="mini-card"><strong>Tone direction</strong><span>Voice, atmosphere, motifs, visual references, and style rules become more consistent.</span></div>
-            <div class="mini-card"><strong>Pitch & sharing</strong><span>Summaries, samples, and project documents become easier for teams, backers, or collaborators to read.</span></div>
+          <div class="eyebrow">Watch / Read / Listen / Follow / Enter the Archive</div>
+          <h1>Revealed Cosmos Archive</h1>
+          <p class="lead">Original story worlds translated into cinematic fragments, music, comics, and visual signals.</p>
+          <p class="support-note">Start with Luna Ghani - a fragment from The Price of Flesh, a world where bodies, identity, memory, and ownership are no longer separate.</p>
+          <div class="pain-points" aria-label="Archive entry points">
+            <div class="mini-card"><strong>Watch</strong><span>Cinematic fragments, trailers, transmissions, and short films.</span></div>
+            <div class="mini-card"><strong>Read</strong><span>Archive entries, mini-stories, world fragments, and written signals.</span></div>
+            <div class="mini-card"><strong>Listen</strong><span>Music, signal loops, ambience, and world atmosphere.</span></div>
+            <div class="mini-card"><strong>Follow</strong><span>Shorts, stills, captions, community signals, and next-fragment updates.</span></div>
           </div>
-          <article class="card hero-review-note">
-            <p>Not sure what kind of support fits? Send a short note about what already exists, what feels unclear, and what you are trying to prepare next. I’ll suggest a focused next step if there seems to be a useful fit.</p>
-            <a class="button" href="#contact" data-help="Not sure yet" data-cta="start-project-conversation" data-section="hero">Start a Project Conversation</a>
-          </article>
           <div class="buttons">
-            <a class="button secondary" href="#portfolio" data-cta="view-proof-samples" data-section="hero">View Proof Samples</a>
+            <a class="button" href="#fragment" data-cta="watch-the-fragment" data-section="hero">Watch the Fragment</a>
+            <a class="button secondary" href="#" data-cta="read-archive-entry" data-section="hero">Read the Archive Entry</a>
+            <a class="button secondary" href="#" data-cta="follow-the-signal" data-section="hero">Follow the Signal</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="outcomes">
+    <section id="fragment">
       <div class="wrap">
-        <div class="kicker">What This Helps With</div>
-        <h2>What the Studio helps clarify.</h2>
-        <p class="section-intro">Many projects already have strong pieces. The work is helping those pieces become easier to organize, explain, revise, and use.</p>
-        <div class="outcome-grid" aria-label="Common project outcomes">
-          <div class="mini-card"><strong>Scattered lore → clearer structure</strong><span>Turn notes, backstory, and rules into clearer reference material.</span></div>
-          <div class="mini-card"><strong>Strong world idea → cleaner pitch path</strong><span>Shape the core premise, audience-facing hook, and proof material into a clearer presentation path.</span></div>
-          <div class="mini-card"><strong>Faction / quest / tone chaos → usable framework</strong><span>Organize pressure, objectives, branches, stakes, voice, and consequence into a structure that is easier to follow.</span></div>
-          <div class="mini-card"><strong>Visual references → story direction</strong><span>Translate moodboards, keyframes, and visual references into notes with story purpose.</span></div>
-          <div class="mini-card"><strong>Existing material → collaborator-ready support</strong><span>Prepare story bible, team reference, or collaborator-facing documents from what already exists.</span></div>
-          <div class="mini-card"><strong>Unclear structure → focused review</strong><span>Use a clarity review to identify what feels muddy and what should be defined next.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="best-fit">
-      <div class="wrap">
-        <div class="kicker">Best Fit</div>
-        <h2>Best for projects with material already taking shape.</h2>
-        <p class="section-intro">The best fit is usually a story-driven project that already has some material — notes, characters, factions, quest ideas, visuals, pitch copy, rough documentation, or a prototype — and needs help making the next version clearer.</p>
-        <div class="fit-grid">
-          <article class="card fit-card">
-            <h3>Good fit</h3>
-            <ul>
-              <li>Story-driven game, RPG/VN, cinematic IP, fictional world, or narrative-heavy creator/team</li>
-              <li>Existing notes, characters, factions, quest ideas, visuals, tone direction, rough docs, or prototype material</li>
-              <li>A creator, founder, writer, designer, or team trying to clarify direction</li>
-              <li>Need for story-world structure, documentation, pitch clarity, visual-narrative direction, or collaboration materials</li>
-              <li>Willingness to define a focused scope</li>
-            </ul>
-          </article>
-          <article class="card fit-card">
-            <h3>Not the right fit</h3>
-            <ul>
-              <li>Unpaid or exposure-only requests</li>
-              <li>“Write my whole universe from nothing” requests</li>
-              <li>Huge scope with no clear budget, timeline, or decision-maker</li>
-              <li>Unlimited revision expectations</li>
-              <li>Prompt-only or generic image-generation requests</li>
-              <li>Requests for a full free written audit before scope is defined</li>
-              <li>Projects with no material, no goal, and no clear next step</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="project-fit-review">
-      <div class="wrap">
-        <div class="kicker">First Step</div>
-        <h2>How the first step works.</h2>
-        <p class="section-intro">The first step is a focused conversation, not a full story bible. Share what already exists: notes, factions, quest ideas, visuals, pitch copy, prototype material, rough documentation, or a simple description of the project.</p>
-        <div class="process-grid">
-          <div class="step"><strong>1. Share the current material</strong>Send notes, factions, quest ideas, visuals, pitch copy, prototype material, rough docs, or a short project description.</div>
-          <div class="step"><strong>2. Identify the gap</strong>I look for the gap between what the project has now, what it is trying to become, and what feels unclear, scattered, or hard to organize.</div>
-          <div class="step"><strong>3. Suggest a focused next step</strong>If there is a useful fit, I suggest a clarity review, world/quest structure pass, story bible or pitch package, visual-narrative direction note, or defined contract support.</div>
-          <div class="step"><strong>4. Keep the scope clear</strong>A project-fit review is a brief first look. Deeper written analysis or documentation belongs inside a scoped audit or package.</div>
+        <div class="kicker">Current Fragment</div>
+        <h2>Luna Ghani / The Price of Flesh</h2>
+        <p class="section-intro">The city knew her before the men did. Luna Ghani is one door into The Price of Flesh - a world where bodies, identity, memory, and ownership are no longer separate.</p>
+        <div class="outcome-grid" aria-label="Current fragment snapshot">
+          <div class="mini-card"><strong>The Door</strong><span>Luna Ghani is the current entry point into The Price of Flesh.</span></div>
+          <div class="mini-card"><strong>The System</strong><span>In this world, the body is not fully owned. It is managed, updated, priced, and corrected.</span></div>
+          <div class="mini-card"><strong>The Wound</strong><span>Beauty, memory, and identity survive only while the system allows them to remain assigned.</span></div>
+          <div class="mini-card"><strong>The Signal</strong><span>If this fragment returns with enough signal, the next door opens.</span></div>
         </div>
         <article class="card services-cta">
-          <p>The goal is to understand what would actually help next — before turning the project into a larger scope.</p>
-          <a class="button" href="#contact" data-help="Not sure yet" data-cta="start-project-conversation" data-section="first-step">Start a Project Conversation</a>
+          <p>Enter through the current fragment, then follow the archive as the next signal opens.</p>
+          <div class="buttons">
+            <a class="button" href="#" data-cta="watch-on-youtube" data-section="fragment">Watch on YouTube</a>
+            <a class="button secondary" href="#" data-cta="read-archive-entry" data-section="fragment">Read the Archive Entry</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="portfolio">
+    <section id="archive">
       <div class="wrap">
-        <div class="kicker">Proof Samples</div>
-        <h2>Proof Samples: How story material becomes usable structure.</h2>
-        <p class="section-intro">These are public-safe samples and demonstrations showing how raw or loosely organized creative material can become clearer structure for pitch, collaboration, revision, or development.</p>
-        <p class="small-note">Private project material, full world systems, and internal process files stay protected.</p>
-        <p class="small-note">Visuals and AI-assisted references can support exploration, but the useful part is the direction behind them: story purpose, tone, structure, and how the material connects to the larger project.</p>
+        <div class="kicker">Archive Paths</div>
+        <h2>Choose how to enter the world.</h2>
+        <p class="section-intro">The archive is built for viewers, readers, listeners, and followers entering from different doors.</p>
+        <div class="fit-grid">
+          <article class="card fit-card"><h3>Watch</h3><p>Cinematic fragments, trailers, visual transmissions, and short films.</p><a class="sample-link" href="#" data-cta="archive-watch" data-section="archive">Watch</a></article>
+          <article class="card fit-card"><h3>Read</h3><p>Mini-stories, archive entries, world fragments, and Medium pieces.</p><a class="sample-link" href="#" data-cta="archive-read" data-section="archive">Read</a></article>
+          <article class="card fit-card"><h3>Listen</h3><p>Music, signal loops, visualizers, and world atmosphere.</p><a class="sample-link" href="#" data-cta="archive-listen" data-section="archive">Listen</a></article>
+          <article class="card fit-card"><h3>Follow</h3><p>Shorts, Reels, stills, captions, community signals, and next-fragment updates.</p><a class="sample-link" href="#" data-cta="archive-follow" data-section="archive">Follow</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story-depth">
+      <div class="wrap">
+        <div class="kicker">Story Depth</div>
+        <h2>What this fragment opens.</h2>
+        <p class="section-intro">You do not need the full lore to enter the archive. Each fragment gives one door: a body, a city, a rule, a wound, and a question that refuses to close.</p>
+        <div class="process-grid">
+          <div class="step"><strong>Flesh as currency</strong>The body carries value before the person is allowed to speak.</div>
+          <div class="step"><strong>Memory as ownership</strong>What is remembered can be priced, reassigned, or made unstable.</div>
+          <div class="step"><strong>The city as witness</strong>The city sees patterns that its people are trained to ignore.</div>
+          <div class="step"><strong>Beauty as system pressure</strong>Beauty is not freedom here. It is a demand placed on the body.</div>
+          <div class="step"><strong>The body as assigned property</strong>Ownership is enforced through language, records, medicine, and desire.</div>
+          <div class="step"><strong>Next fragment pending</strong>The next door opens when enough signal returns to the archive.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="signals">
+      <div class="wrap">
+        <div class="kicker">Visual Signals</div>
+        <h2>Recovered pieces from the archive.</h2>
+        <p class="section-intro">Existing visuals are holding space for public archive signals while the Luna Ghani release materials are finalized.</p>
 
         <article class="card transformation-snapshot">
-          <div class="kicker">Transformation Snapshot</div>
-          <h3>Loose Quest Concept → Usable Quest Framework</h3>
-          <p class="small-note">Portfolio demonstration using an original sample. Not a client project.</p>
+          <div class="kicker">Signal Index</div>
+          <h3>Luna Ghani is the current recovered signal.</h3>
+          <p class="small-note">These archive slots hold the current public signal while the final release art, video, story links, and music pieces come online.</p>
 
           <div class="process-grid">
             <div class="step">
-              <strong>Starting Material</strong>
-              A quest concept with investigation beats, faction pressure, possible outcomes, and strong story potential — but without a clean structure for player-facing flow, escalation, and consequence.
+              <strong>Current door</strong>
+              Luna Ghani opens the first public path into The Price of Flesh.
             </div>
             <div class="step">
-              <strong>Structural Pass</strong>
-              The material is organized around a clearer quest objective, investigation sequence, faction involvement, branching logic, and choice consequences.
+              <strong>Archive signal</strong>
+              Body, memory, beauty, and ownership carry the first pressure of the world.
             </div>
             <div class="step">
-              <strong>Clearer Output</strong>
-              The result becomes a clearer quest framework: easier to read, easier to revise, easier to discuss with collaborators, and easier to use for production, iteration, or pitch support.
+              <strong>Next opening</strong>
+              If the signal returns, the next video, panel, story entry, or sound piece opens.
             </div>
           </div>
 
           <div class="transformation-footer">
             <div class="transformation-proof">
-              <strong>This sample demonstrates:</strong>
+              <strong>Current signal slots:</strong>
               <ul>
-                <li>Objective clarity</li>
-                <li>Branching structure</li>
-                <li>Faction pressure</li>
-                <li>Consequence logic</li>
-                <li>Clear presentation</li>
+                <li>Video fragment</li>
+                <li>Written archive entry</li>
+                <li>Social signal paths</li>
+                <li>Final Luna Ghani image set</li>
               </ul>
             </div>
 
             <div class="buttons">
-              <button class="button" type="button" onclick="openSample('artifact-of-silent-ruin-quest-design.pdf','The Artifact of Silent Ruin')" data-cta="view-proof-samples" data-section="portfolio">View Sample</button>
+              <a class="button" href="#" data-cta="open-current-fragment" data-section="signals">Open Current Fragment</a>
             </div>
           </div>
         </article>
 
         <div class="portfolio-grid">
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for ATLAS 3I / Second Earth"></div><div class="card-body"><div class="tag">Lore Architecture: World Rules, Pressure, and Setting Logic</div><h3>ATLAS 3I / Second Earth</h3><p><strong>Starting problem:</strong> broad sci-fi setting material needed clearer rules, social pressure, and atmosphere. <strong>Structural pass:</strong> organize world logic into a readable lore architecture. <strong>Output:</strong> a stronger reference for pitch or team discussion.</p><p class="demonstrates"><strong>What this proves:</strong> Setting logic, world rules, pressure, and usable lore framing.</p><button class="sample-link" type="button" onclick="openSample('atlas3i-second-earth-sample.pdf','ATLAS 3I / Second Earth')" data-cta="view-proof-samples" data-section="portfolio">See Sample</button></div></article>
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for The Siamic Peninsula"></div><div class="card-body"><div class="tag">Fantasy Worldbuilding: Factions, History, Magic Rules, and Tone</div><h3>The Siamic Peninsula</h3><p><strong>Starting problem:</strong> fantasy world material needed faction clarity, history, magic logic, and tone. <strong>Structural pass:</strong> shape the material into a lore-bible style reference. <strong>Output:</strong> a clearer guide for revision, expansion, or sharing.</p><p class="demonstrates"><strong>What this proves:</strong> Faction structure, magic rules, world tone, and reference-document clarity.</p><button class="sample-link" type="button" onclick="openSample('siamic-peninsula-lore-bible.pdf','The Siamic Peninsula')" data-cta="view-proof-samples" data-section="portfolio">See Sample</button></div></article>
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for The Artifact of Silent Ruin"></div><div class="card-body"><div class="tag">RPG Quest Structure: Objectives, Branches, Stakes, and Consequences</div><h3>The Artifact of Silent Ruin</h3><p><strong>Starting problem:</strong> a quest idea needed clearer objectives, investigation flow, and player-facing consequences. <strong>Structural pass:</strong> define faction pressure, branches, outcomes, and stakes. <strong>Output:</strong> a usable quest framework.</p><p class="demonstrates"><strong>What this proves:</strong> Quest logic, branching structure, stakes, and consequence mapping.</p><button class="sample-link" type="button" onclick="openSample('artifact-of-silent-ruin-quest-design.pdf','The Artifact of Silent Ruin')" data-cta="view-proof-samples" data-section="portfolio">See Sample</button></div></article>
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for Psychopunk Tone Bible"></div><div class="card-body"><div class="tag">Tone Bible: Voice, Motifs, Atmosphere, and Style Rules</div><h3>Psychopunk Tone Bible</h3><p><strong>Starting problem:</strong> a project tone needed repeatable rules instead of scattered mood language. <strong>Structural pass:</strong> clarify voice, motifs, imagery, rhythm, and emotional pressure. <strong>Output:</strong> a tone bible for consistent direction.</p><p class="demonstrates"><strong>What this proves:</strong> Tone control, style rules, motifs, and atmosphere documentation.</p><button class="sample-link" type="button" onclick="openSample('psychopunk-tone-bible.pdf','Psychopunk Tone Bible')" data-cta="view-proof-samples" data-section="portfolio">See Sample</button></div></article>
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for PROTEUS: The Waking Cycle"></div><div class="card-body"><div class="tag">Narrative Prose: Scene Rhythm, Perspective, and Mood</div><h3>PROTEUS: The Waking Cycle</h3><p><strong>Starting problem:</strong> atmospheric story material needed controlled scene rhythm and perspective. <strong>Structural pass:</strong> shape sensory detail, symbolic pressure, and character viewpoint. <strong>Output:</strong> prose that can support tone, pitch, or world identity.</p><p class="demonstrates"><strong>What this proves:</strong> Narrative atmosphere, scene rhythm, sensory writing, and mood control.</p><button class="sample-link" type="button" onclick="openSample('prototeus-waking-cycle-sample.pdf','PROTEUS: The Waking Cycle')" data-cta="view-proof-samples" data-section="portfolio">See Sample</button></div></article>
-          <article class="card"><div class="card-visual" role="img" aria-label="Portfolio sample for Atmosphere, Keyframes & Sound Notes"></div><div class="card-body"><div class="tag">Visual-Narrative Direction / Keyframe & Tone Notes</div><h3>Atmosphere, Keyframes & Sound Notes</h3><p><strong>Starting problem:</strong> visual references and sound ideas needed story purpose. <strong>Structural pass:</strong> connect moodboards, keyframes, atmosphere, and tone notes to a clearer creative path. <strong>Output:</strong> visual-narrative direction with story purpose.</p><p class="demonstrates"><strong>What this proves:</strong> Curation, visual-story logic, mood direction, and project-facing tone notes.</p></div></article>
+          <article class="card"><div class="card-visual luna" role="img" aria-label="Archive signal for Luna Ghani"></div><div class="card-body"><div class="tag">Current Fragment</div><h3>Luna Ghani</h3><p>A face at the threshold of The Price of Flesh.</p><a class="sample-link" href="#" data-cta="view-signal" data-section="signals">View Signal</a></div></article>
+          <article class="card"><div class="card-visual flesh" role="img" aria-label="Archive signal for The Price of Flesh"></div><div class="card-body"><div class="tag">World Door</div><h3>The Price of Flesh</h3><p>A world where bodies, identity, memory, and ownership are no longer separate.</p><a class="sample-link" href="#" data-cta="open-fragment" data-section="signals">Open Fragment</a></div></article>
+          <article class="card"><div class="card-visual signal" role="img" aria-label="Recovered signal archive placeholder"></div><div class="card-body"><div class="tag">Recovered Signal</div><h3>Signal Recovered</h3><p>A visual transmission waiting for its final public caption.</p><a class="sample-link" href="#" data-cta="view-signal" data-section="signals">View Signal</a></div></article>
+          <article class="card"><div class="card-visual memory" role="img" aria-label="Body memory ownership archive placeholder"></div><div class="card-body"><div class="tag">World Rule</div><h3>Body / Memory / Ownership</h3><p>The archive tracks the pressure points where the body becomes a record.</p><a class="sample-link" href="#" data-cta="open-fragment" data-section="signals">Open Fragment</a></div></article>
+          <article class="card"><div class="card-visual comic" role="img" aria-label="Comic sequence pending archive placeholder"></div><div class="card-body"><div class="tag">Panels Pending</div><h3>Comic Sequence Pending</h3><p>A future sequence may open this fragment frame by frame.</p><a class="sample-link" href="#" data-cta="coming-soon" data-section="signals">Coming Soon</a></div></article>
+          <article class="card"><div class="card-visual music" role="img" aria-label="Music signal pending archive placeholder"></div><div class="card-body"><div class="tag">Sound Pending</div><h3>Music Signal Pending</h3><p>The sound of the world is still being tuned.</p><a class="sample-link" href="#" data-cta="coming-soon" data-section="signals">Coming Soon</a></div></article>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section id="sequence">
       <div class="wrap">
-        <div class="kicker">Services</div>
-        <h2>Ways the Studio can help.</h2>
-        <p class="section-intro">Support can start small or expand into a larger package depending on the project’s stage, material, and next goal.</p>
+        <div class="kicker">Comic / Visual Sequence</div>
+        <h2>Some fragments open as panels.</h2>
+        <p class="section-intro">For fragments without a full video, the archive can open as a comic, carousel, or visual sequence.</p>
 
         <div class="services-grid">
-          <article class="card service" data-service="project-fit-review"><div class="tag">Light First Step</div><h3>Project-Fit Review</h3><p>For creators or teams who want a brief first look before deciding what kind of support makes sense.</p><ul><li>Clarifies what already exists</li><li>Identifies what feels unclear or hard to organize</li><li>Looks at the likely next useful step</li><li>Suggests whether a clarity review, structure pass, pitch package, or other support makes sense</li></ul><p class="service-boundary">This is a brief first look, not a full written analysis.</p><a class="sample-link" href="#contact" data-help="Project-fit review" data-cta="project-fit-review" data-section="services">Request a Project-Fit Review</a></article>
-          <article class="card service" data-service="project-clarity-audit"><div class="tag">Focused Review</div><h3>Project Clarity Audit</h3><p>For existing material that needs a clearer read on what is working, what is scattered, and what should come first.</p><ul><li>Current-state / desired-direction / obstacle diagnosis</li><li>Lore, pitch, visual reference, or early documentation review</li><li>Top clarity, organization, tone, or continuity risks</li><li>Recommended next step: what document, structure, or clarity pass should come first</li></ul><p class="service-boundary">Best when the project already has material and needs a clearer next version.</p><a class="sample-link" href="#contact" data-help="Project clarity audit" data-cta="service-option" data-section="services">Ask About This Option</a></article>
-          <article class="card service" data-service="world-quest-structure"><div class="tag">Core Support</div><h3>World + Quest Structure</h3><p>For story-driven games, RPGs, visual novels, and interactive projects that need clearer world logic connected to quests, choices, stakes, and progression.</p><ul><li>World structure and internal rules</li><li>Faction pressure and conflict map</li><li>Quest hooks, objectives, and stakes</li><li>Branching outcomes and player-facing logic</li><li>Optional visual reference or keyframe notes</li></ul><p class="service-boundary">Best when world logic, quests, choices, or faction pressure need to become easier to follow.</p><a class="sample-link" href="#contact" data-help="World / lore structure" data-cta="service-option" data-section="services">Ask About This Option</a></article>
-          <article class="card service" data-service="story-bible-pitch-materials"><div class="tag">Expanded Package</div><h3>Story Bible + Pitch Materials</h3><p>For creators or teams preparing clearer materials for collaborators, campaign pages, pitch conversations, prototype support, internal review, or presentation.</p><ul><li>Story bible or lore documentation</li><li>World identity and tone guide</li><li>Faction, character, or quest structure</li><li>Visual reference and keyframe direction</li><li>Pitch-ready summary or presentation notes</li></ul><p class="service-boundary">Best when the project needs clearer material for collaborators, backers, funders, or internal planning.</p><a class="sample-link" href="#contact" data-help="Story bible / pitch materials" data-cta="service-option" data-section="services">Ask About This Option</a></article>
-          <article class="card service" data-service="contract-support"><div class="tag">Ongoing / Contract</div><h3>Narrative Systems Support</h3><p>For defined part-time or contract help with documentation cleanup, story-world structure, quest logic, faction pressure, tone direction, or pitch support.</p><ul><li>Scoped narrative documentation tasks</li><li>World bible or lore system support</li><li>Quest, objective, and branching logic review</li><li>Pitch, campaign, or team-support material for a defined use case</li></ul><p class="service-boundary">Best for defined tasks where the team knows what material needs to be clarified or prepared.</p><a class="sample-link" href="#contact" data-help="Contract narrative/worldbuilding support" data-cta="service-option" data-section="services">Ask About This Option</a></article>
+          <article class="card service"><div class="tag">Image Pending</div><h3>Panel 01</h3><p>Archive frame pending.</p><a class="sample-link" href="#" data-cta="panel-pending" data-section="sequence">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Signal Pending</div><h3>Panel 02</h3><p>Archive frame pending.</p><a class="sample-link" href="#" data-cta="panel-pending" data-section="sequence">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Image Pending</div><h3>Panel 03</h3><p>Archive frame pending.</p><a class="sample-link" href="#" data-cta="panel-pending" data-section="sequence">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Signal Pending</div><h3>Panel 04</h3><p>Archive frame pending.</p><a class="sample-link" href="#" data-cta="panel-pending" data-section="sequence">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Image Pending</div><h3>Panel 05</h3><p>Archive frame pending.</p><a class="sample-link" href="#" data-cta="panel-pending" data-section="sequence">Coming Soon</a></article>
         </div>
-
-        <article class="card services-cta"><p>Have a project that does not fit neatly into one category? Send a short note about what exists, what feels unclear, and what you are trying to prepare next.</p><a class="button" href="#contact" data-help="Not sure yet" data-cta="start-project-conversation" data-section="services">Start a Project Conversation</a></article>
       </div>
     </section>
 
-    <section id="contract-support">
+    <section id="music">
       <div class="wrap">
-        <div class="kicker">Contract Support</div>
-        <h2>Available for defined narrative systems support.</h2>
-        <p class="section-intro">In addition to fixed-scope packages, I can support teams that need defined help with world logic, quest structure, faction pressure, tone direction, pitch materials, or internal documentation.</p>
-        <article class="card contract-card">
-          <ul>
-            <li>Narrative documentation cleanup and structure</li>
-            <li>World bible or lore system support</li>
-            <li>Quest, objective, and branching logic review</li>
-            <li>Faction pressure and conflict mapping</li>
-            <li>Tone, atmosphere, and visual-reference direction</li>
-            <li>Pitch-ready summaries and team-support materials</li>
-          </ul>
-        </article>
-        <article class="card contract-cta">
-          <p>For contract or part-time support, the best starting point is a defined scope: project stage, materials available, timeline, and the next useful outcome for the team or project.</p>
-          <a class="button" href="#contact" data-help="Contract narrative/worldbuilding support" data-cta="service-option" data-section="contract-support">Ask About This Option</a>
-        </article>
+        <div class="kicker">Music / Signal</div>
+        <h2>Some worlds begin as sound.</h2>
+        <p class="section-intro">Music, ambience, and signal loops carry the emotional pressure of each world before the full image arrives.</p>
+        <div class="services-grid">
+          <article class="card service"><div class="tag">Theme Pending</div><h3>Luna Ghani Theme</h3><p>Coming soon.</p><a class="sample-link" href="#" data-cta="music-coming-soon" data-section="music">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Signal Pending</div><h3>The Price of Flesh Signal</h3><p>Coming soon.</p><a class="sample-link" href="#" data-cta="music-coming-soon" data-section="music">Coming Soon</a></article>
+          <article class="card service"><div class="tag">Visualizers Pending</div><h3>Music / Visualizers</h3><p>Coming soon.</p><a class="sample-link" href="#" data-cta="music-coming-soon" data-section="music">Coming Soon</a></article>
+        </div>
       </div>
     </section>
 
-    <section id="method">
+    <section id="archive-notes">
       <div class="wrap">
-        <div class="kicker">Method</div>
-        <h2>What this work helps clarify.</h2>
-        <p class="section-intro">The value is not more lore for its own sake. The value is helping a story-world become easier to understand, shape, present, and build from.</p>
+        <div class="kicker">Archive Notes</div>
+        <h2>Every fragment is a door, not the whole map.</h2>
+        <p class="section-intro">The archive moves through signals: a face, a city, a rule, a wound, a sound, or a question. Each piece can stand alone while pointing toward the larger world.</p>
         <article class="card contract-card">
           <ul>
-            <li>Scattered material becomes easier to read: notes, characters, factions, quests, visuals, and tone direction can be organized into a clearer story-world picture.</li>
-            <li>The strongest ideas become easier to explain: what the world is, what feels distinct, what matters, and what needs to be clarified next.</li>
-            <li>Narrative pieces connect to each other: lore, factions, stakes, quest logic, tone, and visual direction can support the same project direction.</li>
-            <li>Creative material becomes easier for collaborators to use: writers, artists, designers, producers, backers, or partners can understand what the material is trying to do.</li>
-            <li>AI-assisted exploration stays in its proper place: useful for speed and visual development when helpful, while the value remains human story judgment, structure, tone, and direction.</li>
+            <li>Fragments can appear as videos, written entries, panels, music, captions, or still images.</li>
+            <li>Luna Ghani is the current public entry point into The Price of Flesh.</li>
+            <li>Unknown links are placeholders for YouTube, Medium, social, and music destinations.</li>
+            <li>Original story world. Human-written. Human-directed. AI-assisted visualization.</li>
           </ul>
         </article>
       </div>
@@ -902,74 +921,71 @@
     <section id="about">
       <div class="wrap split">
         <aside class="bio-card">
-          <img src="profile.jpg" alt="Aaron A., Narrative Systems and Worldbuilding Consultant" />
-          <h3>Aaron A.</h3>
-          <p>Narrative Systems & Worldbuilding Support</p>
+          <img src="profile.jpg" alt="Aaron, creator of Revealed Cosmos Archive" />
+          <h3>Aaron</h3>
+          <p>Writer / narrative designer / linguist / solo creative director</p>
           <ul class="bio-list">
-            <li><strong>M.A. in Linguistics & Translation</strong></li>
-            <li><strong>10+ years in education and structured feedback</strong></li>
-            <li><strong>English, creative writing, fiction, and language structure</strong></li>
-            <li><strong>Games, story-worlds, tone, and narrative clarity</strong></li>
-            <li><strong>Documentation, pitch materials, and visual-narrative direction</strong></li>
+            <li><strong>Original story worlds</strong></li>
+            <li><strong>Cinematic fragments and archive entries</strong></li>
+            <li><strong>Language, memory, identity, and world logic</strong></li>
+            <li><strong>Music, visual signals, and human-led direction</strong></li>
           </ul>
         </aside>
         <div class="about-copy">
-          <div class="kicker">About</div>
-          <h2>How I help story-world projects become clearer.</h2>
-          <p>Story-driven projects often already have strong material: lore notes, characters, factions, quest ideas, visual references, tone direction, pitch material, or rough documentation. The hard part is making those pieces easier to organize, explain, revise, and use.</p>
-          <p>That is where I can help. I look for the structure inside the material: what the world is trying to become, what already feels strong, where the logic gets muddy, how tone and atmosphere support the identity of the project, and what collaborators need to understand next.</p>
-          <p>My background combines an M.A. in Linguistics & Translation, 10+ years in education and structured feedback, English/literature and creative writing coursework, long-term reading and fiction study, and deep familiarity with games and interactive story-worlds. That mix shapes how I think about language, player experience, story logic, stakes, faction pressure, documentation, and pitch clarity.</p>
-          <p>The goal is not to overwrite the heart of a project. The goal is to clarify what is already there and make the next version easier to share, pitch, revise, or build from.</p>
-          <p>Depending on the project, support can take the form of clarity reviews, worldbuilding structure, story bibles, faction or quest frameworks, tone guides, pitch materials, visual-narrative direction, or focused narrative documentation.</p>
+          <div class="kicker">About the Archive</div>
+          <h2>Written first. Visualized second.</h2>
+          <p>Revealed Cosmos is an archive of original story worlds by Aaron: writer, narrative designer, linguist, and solo creative director. I write and direct the fragments; AI-assisted tools help me visualize cinematic scenes as a solo creator.</p>
+          <p>Story direction, world logic, text, editing, music direction, curation, and final selection are human-led.</p>
+          <p>Original story world. Human-written. Human-directed. AI-assisted visualization.</p>
+          <p class="small-note">The archive is ongoing. Some fragments become videos. Some become music. Some survive as one frame.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="connect">
       <div class="wrap contact-grid">
         <div>
-          <div class="kicker">Contact</div>
-          <h2>Start a project conversation.</h2>
-          <p class="section-intro">Send a short note about what already exists, what feels unclear, and what kind of support might be useful.</p>
-          <p class="section-intro">I’ll respond with whether there seems to be a useful fit and what a focused next step could look like.</p>
-          <p class="qualifier">A project-fit review is a brief first look, not a full written audit.</p>
+          <div class="kicker">Connect</div>
+          <h2>Send a signal.</h2>
+          <p class="section-intro">If a fragment resonated, if you want the next door opened, or if you want to connect around story, music, visuals, or collaboration, send a signal.</p>
+          <p class="qualifier">For professional narrative design inquiries, use the Studio option.</p>
           <p class="response-note">I usually respond within 24 business hours.</p>
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
         </div>
 
         <div class="contact-panel">
-          <form id="inquiryForm" data-section="contact">
+          <form id="inquiryForm" data-section="connect">
             <input type="checkbox" name="botcheck" id="botcheck" class="honeypot" tabindex="-1" autocomplete="off" />
-            <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
+            <div><label for="name">Name / handle</label><input id="name" name="name" type="text" placeholder="Your name or handle" autocomplete="name" required /></div>
             <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required /></div>
-            <div><label for="helpType">What would you like help with?</label><select id="helpType" name="help_type"><option>Project-fit review</option><option>Project clarity audit</option><option>World / lore structure</option><option>Quest framework</option><option>Story bible / pitch materials</option><option>Visual / tone direction</option><option>Contract narrative/worldbuilding support</option><option>Not sure yet</option></select></div>
-            <div><label for="projectType">Project type</label><select id="projectType" name="project_type"><option>Story-driven game</option><option>RPG / visual novel</option><option>Fictional IP / worldbuilding project</option><option>Cinematic IP / film project</option><option>Pitch / funding preparation</option><option>Internal documentation</option><option>Portfolio / proof package</option><option>Other</option></select></div>
-            <div><label for="projectStage">Project stage</label><select id="projectStage" name="project_stage"><option>Early idea</option><option>Existing notes / rough material</option><option>Prototype / vertical slice</option><option>Pre-production</option><option>Pitch / funding preparation</option><option>Ongoing development</option><option>Existing draft or documentation</option><option>Other</option></select></div>
-            <div><label for="timeline">Timeline</label><select id="timeline" name="timeline"><option>No rush</option><option>1–2 weeks</option><option>This month</option><option>Deadline-based</option><option>Not sure yet</option></select></div>
-            <div><label for="budgetScope">Budget / scope range</label><select id="budgetScope" name="budget_scope"><option>Small focused audit</option><option>Moderate documentation support</option><option>Larger package</option><option>Part-time / ongoing support</option><option>Not sure yet</option></select></div>
-            <div><label for="existingMaterials">Existing materials</label><select id="existingMaterials" name="existing_materials"><option>Notes / lore document</option><option>Character or faction notes</option><option>Quest or gameplay notes</option><option>Visual references / moodboard</option><option>Pitch deck or summary</option><option>Prototype / build</option><option>No organized materials yet</option><option>Other</option></select></div>
-            <div><label for="decisionSupport">What decision does this material need to support?</label><select id="decisionSupport" name="decision_support"><option>Pitch / funding decision</option><option>Production planning</option><option>Internal handoff</option><option>Kickstarter / Steam page</option><option>Story bible cleanup</option><option>Team alignment</option><option>Not sure yet</option></select></div>
-            <div><label for="deliverableUser">Who will use the deliverable?</label><select id="deliverableUser" name="deliverable_user"><option>Founder / project lead</option><option>Writer or narrative designer</option><option>Game designer or developer</option><option>Artist / visual team</option><option>Publisher / backers / funders</option><option>Internal team</option><option>Players / public page</option><option>Not sure yet</option></select></div>
-            <div><label for="decisionMaker">Is there a decision-maker for scope and budget?</label><select id="decisionMaker" name="decision_maker"><option>Yes, I am the decision-maker</option><option>Yes, another lead will decide</option><option>Shared team decision</option><option>Not yet</option><option>Not sure</option></select></div>
-            <div><label for="proofRestrictions">Can any result be shown publicly after approval?</label><select id="proofRestrictions" name="proof_restrictions"><option>Yes</option><option>Redacted only</option><option>No</option><option>Not sure yet</option></select></div>
-            <div><label for="mainUncertainty">What keeps getting rewritten or causing confusion?</label><textarea id="mainUncertainty" name="main_uncertainty" placeholder="Optional examples: faction logic, quest flow, tone, pitch summary, story bible structure, visual direction, team handoff, continuity, scope."></textarea></div>
-            <div><label for="message">Project details</label><textarea id="message" name="message" placeholder="What already exists? What feels unclear? What decision, document, pitch, or development step does this material need to support?" required></textarea></div>
-            <button id="submitButton" class="button" type="submit" data-cta="contact-form-submit" data-section="contact">Send Message</button>
-            <p id="formStatus" class="form-status" aria-live="polite">Your message will be sent directly through the contact form.</p>
+            <div><label for="helpType">Signal type</label><select id="helpType" name="help_type"><option>I want the next fragment</option><option>I have a question about the world</option><option>I want to collaborate</option><option>I want to follow the archive</option><option>Studio / narrative design inquiry</option><option>Other signal</option></select></div>
+            <div><label for="projectType">Where did you enter from?</label><select id="projectType" name="project_type"><option>YouTube</option><option>Instagram</option><option>TikTok</option><option>Medium / written piece</option><option>Music / visualizer</option><option>Friend / community share</option><option>Other</option></select></div>
+            <div><label for="projectStage">Archive interest</label><select id="projectStage" name="project_stage"><option>Luna Ghani</option><option>The Price of Flesh</option><option>Visual signals</option><option>Comic / panel sequence</option><option>Music / sound</option><option>Future worlds</option><option>Other</option></select></div>
+            <div><label for="timeline">When should I respond?</label><select id="timeline" name="timeline"><option>No rush</option><option>This week</option><option>This month</option><option>When the next fragment drops</option><option>Not sure yet</option></select></div>
+            <div><label for="budgetScope">Not required / leave blank</label><select id="budgetScope" name="budget_scope"><option>Not required</option><option>Community note only</option><option>Collaboration question</option><option>Studio inquiry</option><option>Other</option></select></div>
+            <div><label for="existingMaterials">What pulled you in?</label><select id="existingMaterials" name="existing_materials"><option>The character</option><option>The world premise</option><option>The visuals</option><option>The music / atmosphere</option><option>The writing</option><option>The next-fragment idea</option><option>Other</option></select></div>
+            <div><label for="decisionSupport">What should open next?</label><select id="decisionSupport" name="decision_support"><option>Next video fragment</option><option>Written archive entry</option><option>Comic / carousel panels</option><option>Music / visualizer</option><option>World explanation</option><option>Behind-the-scenes note</option><option>Not sure yet</option></select></div>
+            <div><label for="deliverableUser">How should I read this signal?</label><select id="deliverableUser" name="deliverable_user"><option>Community feedback</option><option>Question about the world</option><option>Collaboration interest</option><option>Professional inquiry</option><option>Private note</option><option>Not sure yet</option></select></div>
+            <div><label for="decisionMaker">Are you asking for a reply?</label><select id="decisionMaker" name="decision_maker"><option>Yes, please reply</option><option>No reply needed</option><option>Reply only if useful</option><option>Not sure</option></select></div>
+            <div><label for="proofRestrictions">Can your signal be referenced publicly without personal details?</label><select id="proofRestrictions" name="proof_restrictions"><option>Yes, anonymously</option><option>Ask me first</option><option>No</option><option>Not sure yet</option></select></div>
+            <div><label for="mainUncertainty">What did this fragment make you want to know?</label><textarea id="mainUncertainty" name="main_uncertainty" placeholder="Optional: a question, image, sound, line, character detail, or world rule you want opened next."></textarea></div>
+            <div><label for="message">Signal details</label><textarea id="message" name="message" placeholder="What did you watch, read, hear, or notice? What should the archive open next?" required></textarea></div>
+            <button id="submitButton" class="button" type="submit" data-cta="signal-form-submit" data-section="connect">Send Signal</button>
+            <p id="formStatus" class="form-status" aria-live="polite">Your signal will be sent directly through the contact form.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap">© 2026 The Revealed Cosmos Studio. All rights reserved.</div></footer>
-  <button id="backToTop" type="button" aria-label="Back to top">↑ Top</button>
+  <footer><div class="wrap">&copy; 2026 Revealed Cosmos Archive. Original story worlds. Human-directed. AI-assisted visualization. Watch / Read / Listen / Follow. <a href="#connect" data-help="Studio / narrative design inquiry">Studio / narrative design inquiries</a></div></footer>
+  <button id="backToTop" type="button" aria-label="Back to top">&uarr; Top</button>
 
-  <div id="sampleModal" class="sample-modal" aria-hidden="true" role="dialog" aria-label="Portfolio sample viewer" onclick="if(event.target === this) closeSample()">
+  <div id="sampleModal" class="sample-modal" aria-hidden="true" role="dialog" aria-label="Archive signal viewer" onclick="if(event.target === this) closeSample()">
     <div class="modal-shell">
-      <div class="modal-bar"><strong id="sampleTitle">Portfolio Sample</strong><button class="modal-close" type="button" onclick="closeSample()">Close ×</button></div>
-      <div class="modal-viewer"><iframe id="sampleFrame" src="" title="Portfolio sample PDF"></iframe></div>
-      <div class="modal-footer"><span>© 2026 The Revealed Cosmos Studio • Portfolio sample • All rights reserved</span><a id="mobilePdfLink" class="mobile-pdf-link" href="#" target="_blank" rel="noopener">Open readable PDF</a></div>
+      <div class="modal-bar"><strong id="sampleTitle">Archive Signal</strong><button class="modal-close" type="button" onclick="closeSample()">Close &times;</button></div>
+      <div class="modal-viewer"><iframe id="sampleFrame" src="" title="Archive signal PDF"></iframe></div>
+      <div class="modal-footer"><span>&copy; 2026 Revealed Cosmos Archive / Archive signal / All rights reserved</span><a id="mobilePdfLink" class="mobile-pdf-link" href="#" target="_blank" rel="noopener">Open readable PDF</a></div>
     </div>
   </div>
 
@@ -980,14 +996,12 @@
     const CONTACT_EMAIL = 'revealedcosmosstudio@gmail.com';
 
     const messagePrompts = {
-      'Project-fit review': 'What already exists? What decision does the next document need to support? What obstacle is blocking the project right now?',
-      'Project clarity audit': 'What materials do you already have, what keeps getting rewritten, and what next document would help most?',
-      'World / lore structure': 'What world rules, factions, history, geography, or continuity issues need clearer structure for production or collaboration?',
-      'Quest framework': 'What quest objective, branching path, faction pressure, or player-facing logic needs support?',
-      'Story bible / pitch materials': 'What needs to be easier to present, pitch, hand off, or share with collaborators, backers, or a team?',
-      'Visual / tone direction': 'What visual references, tone notes, keyframes, or atmosphere direction need story purpose and production clarity?',
-      'Contract narrative/worldbuilding support': 'What defined task, timeline, deliverable, and team use case would the support need to serve?',
-      'Not sure yet': 'Briefly describe what you are building, what exists now, and what kind of next step would help.'
+      'I want the next fragment': 'What should the archive open next: video, written entry, panels, music, world explanation, or something else?',
+      'I have a question about the world': 'What did Luna Ghani or The Price of Flesh make you want to know?',
+      'I want to collaborate': 'What kind of story, music, visual, or archive collaboration are you imagining?',
+      'I want to follow the archive': 'Where did you enter from, and what update would help you follow the next fragment?',
+      'Studio / narrative design inquiry': 'Briefly describe the professional inquiry and what kind of response would help.',
+      'Other signal': 'Send the signal: what did you notice, feel, question, or want opened next?'
     };
 
     function cleanUrl() {
@@ -1044,7 +1058,7 @@
       const top = Math.max(target.getBoundingClientRect().top + window.scrollY - getHeaderOffset(), 0);
       window.scrollTo({ top, behavior: 'smooth' });
       if (shouldUpdateHash) updateHash(hash);
-      if (hash === '#contact' && helpValue) applyHelpIntent(helpValue);
+      if (hash === '#connect' && helpValue) applyHelpIntent(helpValue);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -1070,7 +1084,7 @@
       const helpType = document.getElementById('helpType');
       const message = document.getElementById('message');
       if (!helpType || !message) return;
-      message.placeholder = messagePrompts[helpType.value] || messagePrompts['Project-fit review'];
+      message.placeholder = messagePrompts[helpType.value] || messagePrompts['Other signal'];
     }
 
     const helpSelect = document.getElementById('helpType');
@@ -1107,7 +1121,7 @@
       if (botcheck && botcheck.checked) return;
 
       if (!name || !email || !message) {
-        setFormStatus('Please add your name, email, and project details before sending.', 'error');
+        setFormStatus('Please add your name or handle, email, and signal details before sending.', 'error');
         return;
       }
 
@@ -1116,12 +1130,12 @@
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
       }
-      setFormStatus('Sending your message...', '');
+      setFormStatus('Sending your signal...', '');
 
       const payload = {
         access_key: WEB3FORMS_ACCESS_KEY,
-        subject: 'TRCS project inquiry — ' + helpType,
-        from_name: 'The Revealed Cosmos Studio Contact Form',
+        subject: 'Revealed Cosmos signal - ' + helpType,
+        from_name: 'Revealed Cosmos Archive Signal Form',
         name,
         email,
         help_type: helpType,
@@ -1152,7 +1166,7 @@
         const result = await response.json();
 
         if (result.success) {
-          setFormStatus('✓ Project details sent. I will reply within 24 business hours.', 'success');
+          setFormStatus('Signal sent. I will reply within 24 business hours if a reply is requested.', 'success');
           if (form) form.reset();
           updateMessagePlaceholder();
         } else {
@@ -1163,7 +1177,7 @@
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
-          submitButton.textContent = originalButtonText || 'Send Message';
+          submitButton.textContent = originalButtonText || 'Send Signal';
         }
       }
     }
@@ -1192,7 +1206,7 @@
       const mobilePdfLink = document.getElementById('mobilePdfLink');
       const isMobile = window.matchMedia('(max-width: 680px)').matches;
       const pdfView = isMobile ? '#toolbar=0&navpanes=0&scrollbar=1&pagemode=none&view=Fit&zoom=page-fit' : '#toolbar=0&navpanes=0&scrollbar=1&pagemode=none&view=FitH';
-      label.textContent = title || 'Portfolio Sample';
+      label.textContent = title || 'Archive Signal';
       frame.src = src + pdfView;
       if (mobilePdfLink) mobilePdfLink.href = src;
       modal.classList.add('open');
