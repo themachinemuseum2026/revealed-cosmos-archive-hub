@@ -22,12 +22,13 @@
       --gold-strong: #f2c981;
       --cyan: #75d5f4;
       --cyan-soft: rgba(117, 213, 244, .16);
+      --quiet: rgba(255, 255, 255, .07);
       --line: rgba(255, 255, 255, .12);
       --gold-line: rgba(216, 163, 93, .36);
       --max: 1200px;
       --radius: 8px;
       --shadow: 0 22px 72px rgba(0, 0, 0, .5);
-      --scroll-offset: 100px;
+      --scroll-offset: 96px;
       --heading: "Segoe UI Semibold", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
       --body: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
@@ -49,8 +50,8 @@
         linear-gradient(180deg, #010208 0%, #07111c 44%, #020409 100%);
       color: var(--text);
       font-family: var(--body);
-      font-size: 16.5px;
-      line-height: 1.58;
+      font-size: 16.75px;
+      line-height: 1.62;
     }
 
     body::before,
@@ -116,12 +117,12 @@
 
     .nav {
       width: min(1320px, calc(100% - clamp(28px, 5vw, 60px)));
-      min-height: 74px;
+      min-height: 72px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
     .brand {
@@ -155,7 +156,7 @@
 
     .brand-subtitle {
       color: var(--soft);
-      font-size: clamp(10.5px, .22vw + 9.5px, 12.5px);
+      font-size: clamp(10.8px, .22vw + 9.5px, 12.6px);
       font-weight: 800;
       letter-spacing: 1.2px;
       line-height: 1.2;
@@ -167,13 +168,13 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 7px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
     nav a {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 13.2px;
       font-weight: 900;
       letter-spacing: .9px;
       line-height: 1.1;
@@ -197,7 +198,7 @@
 
     section {
       position: relative;
-      padding: clamp(62px, 6vw, 80px) 0;
+      padding: clamp(60px, 5.6vw, 76px) 0;
       border-bottom: 1px solid rgba(255,255,255,.09);
       scroll-margin-top: var(--scroll-offset);
     }
@@ -216,7 +217,7 @@
     section > .wrap { position: relative; z-index: 1; }
 
     .hero {
-      padding: clamp(36px, 4.8vw, 68px) 0 clamp(50px, 5vw, 72px);
+      padding: clamp(34px, 4.2vw, 60px) 0 clamp(48px, 4.8vw, 68px);
       min-height: 0;
       display: grid;
       align-items: center;
@@ -248,7 +249,7 @@
 
     .kicker {
       color: var(--gold-strong);
-      font-size: 13px;
+      font-size: 13.4px;
       font-weight: 900;
       letter-spacing: 1.8px;
       line-height: 1.2;
@@ -264,7 +265,7 @@
     }
 
     h1 {
-      font-size: clamp(42px, 5.2vw, 70px);
+      font-size: clamp(42px, 5.05vw, 68px);
       margin-bottom: 20px;
     }
 
@@ -322,7 +323,7 @@
         linear-gradient(180deg, rgba(244,201,130,.27), rgba(216,163,93,.11)),
         linear-gradient(90deg, rgba(216,163,93,.08), rgba(117,213,244,.06));
       color: var(--text);
-      font-size: 14.5px;
+      font-size: 14.75px;
       font-weight: 900;
       letter-spacing: .8px;
       line-height: 1.2;
@@ -355,15 +356,16 @@
     .button:focus-visible::before { transform: translateX(130%); }
 
     .button.secondary {
-      border-color: rgba(255,255,255,.19);
-      background: rgba(255,255,255,.04);
-      color: #ded6c9;
+      border-color: rgba(117,213,244,.36);
+      background: rgba(117,213,244,.055);
+      color: #d9f3fb;
     }
 
     .button.locked {
-      border-color: rgba(216,163,93,.34);
-      color: #cdbca3;
-      background: rgba(216,163,93,.06);
+      border-color: rgba(117,213,244,.28);
+      color: #accbd4;
+      background: rgba(255,255,255,.045);
+      box-shadow: inset 0 0 18px rgba(117,213,244,.07);
     }
 
     .button[disabled] {
@@ -418,11 +420,12 @@
       isolation: isolate;
       padding: clamp(22px, 3vw, 36px);
       background:
-        linear-gradient(180deg, rgba(2,4,9,.18), rgba(2,4,9,.82)),
+        linear-gradient(180deg, rgba(2,4,9,.3), rgba(2,4,9,.88)),
+        linear-gradient(90deg, rgba(2,4,9,.58), transparent 32%, transparent 58%, rgba(2,4,9,.68)),
         radial-gradient(circle at 68% 34%, rgba(117,213,244,.22), transparent 28%),
         radial-gradient(circle at 24% 68%, rgba(216,163,93,.24), transparent 32%),
         url('hero_brand.jpg');
-      background-position: center;
+      background-position: center 48%;
       background-size: cover;
       box-shadow: inset 0 0 112px rgba(0,0,0,.74);
     }
@@ -435,7 +438,7 @@
       background:
         repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 1px, transparent 1px 5px),
         linear-gradient(120deg, transparent 0 42%, rgba(117,213,244,.13) 43%, transparent 44% 100%);
-      opacity: .42;
+      opacity: .58;
       mix-blend-mode: screen;
     }
 
@@ -458,6 +461,13 @@
       display: grid;
       gap: 12px;
       width: min(560px, 100%);
+      padding: clamp(16px, 2vw, 24px);
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        linear-gradient(135deg, rgba(4,7,13,.92), rgba(4,7,13,.64)),
+        radial-gradient(circle at 24% 20%, rgba(117,213,244,.14), transparent 34%);
+      box-shadow: 0 18px 60px rgba(0,0,0,.5), inset 0 0 26px rgba(0,0,0,.24);
+      backdrop-filter: blur(5px);
     }
 
     .status-row {
@@ -491,6 +501,14 @@
       border-color: rgba(117,213,244,.45);
       color: #b8efff;
       box-shadow: inset 0 0 16px rgba(117,213,244,.1);
+    }
+
+    .door-status.preparing,
+    .door-status.incoming,
+    .door-status.locked {
+      border-color: rgba(117,213,244,.32);
+      color: #b9dce5;
+      box-shadow: inset 0 0 16px rgba(117,213,244,.08);
     }
 
     .transmission-ui strong {
@@ -552,12 +570,14 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
       margin-top: 28px;
+      align-items: stretch;
     }
 
     .door-card {
-      min-height: 268px;
+      min-height: 282px;
       display: grid;
-      align-content: start;
+      grid-template-rows: auto auto 1fr auto;
+      align-content: stretch;
       gap: 14px;
       padding: clamp(22px, 2vw, 28px);
     }
@@ -565,8 +585,8 @@
     .door-card p,
     .library-card p {
       color: #dcd4c8;
-      font-size: 16px;
-      line-height: 1.58;
+      font-size: 16.2px;
+      line-height: 1.62;
       margin-bottom: 0;
     }
 
@@ -600,8 +620,10 @@
       overflow: hidden;
       border-bottom: 1px solid rgba(255,255,255,.1);
       background:
-        radial-gradient(circle at 28% 40%, rgba(216,163,93,.26), transparent 24%),
-        radial-gradient(circle at 72% 42%, rgba(117,213,244,.22), transparent 24%),
+        radial-gradient(ellipse at 50% 52%, rgba(2,4,9,.28) 0 18%, rgba(117,213,244,.28) 19% 20%, transparent 21% 100%),
+        radial-gradient(ellipse at 50% 52%, transparent 0 37%, rgba(216,163,93,.28) 38% 39%, transparent 40% 100%),
+        radial-gradient(circle at 50% 52%, rgba(244,201,130,.22), transparent 11%),
+        radial-gradient(circle at 62% 36%, rgba(117,213,244,.22), transparent 25%),
         linear-gradient(135deg, rgba(255,255,255,.08), transparent 34%),
         linear-gradient(180deg, #111a27, #05080f);
     }
@@ -612,7 +634,7 @@
         radial-gradient(circle at 52% 46%, rgba(216,163,93,.24), transparent 36%),
         url('keyframe_city_spy.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center 42%;
     }
 
     .library-art::before,
@@ -640,7 +662,7 @@
 
     .tag {
       color: var(--gold-strong);
-      font-size: 12.5px;
+      font-size: 12.8px;
       font-weight: 900;
       letter-spacing: 1.3px;
       text-transform: uppercase;
@@ -662,7 +684,7 @@
     .split,
     .contact-grid {
       display: grid;
-      grid-template-columns: .72fr 1.28fr;
+      grid-template-columns: .78fr 1.22fr;
       gap: clamp(28px, 4vw, 48px);
       align-items: start;
     }
@@ -687,8 +709,8 @@
 
     .bio-card p {
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.55;
+      font-size: 16.4px;
+      line-height: 1.6;
     }
 
     .bio-list {
@@ -703,7 +725,8 @@
       color: #d9d2c8;
       border-top: 1px solid rgba(255,255,255,.08);
       padding-top: 11px;
-      line-height: 1.5;
+      font-size: 16px;
+      line-height: 1.52;
     }
 
     .ending-line {
@@ -927,8 +950,9 @@
       .library-card.active { grid-column: span 1; }
       .door-card { min-height: 0; }
       .video-bay { padding: 10px; }
-      .video-screen { padding: 18px; }
+      .video-screen { padding: 16px; min-height: 54vw; }
       .transmission-ui strong { font-size: clamp(24px, 8vw, 33px); }
+      .transmission-ui { padding: 15px; }
       .modal { padding: 10px; }
       .modal-shell { max-height: 94svh; }
       .modal-head { align-items: flex-start; }
@@ -947,12 +971,11 @@
         <div class="brand-subtitle">Original worlds / films / stories / visual archive</div>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#doors">Watch</a>
+        <a href="#top">Watch</a>
         <a href="#doors">Read</a>
-        <a href="#archive">Art</a>
+        <a href="#archive">Explore Art</a>
         <a href="#doors">Music</a>
         <a href="#about">About</a>
-        <a href="#signal">Signal</a>
         <a class="nav-cta" href="#signal">Leave a Signal</a>
       </nav>
     </div>
@@ -963,7 +986,7 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <div class="kicker">Luna Ghani / The Price of Flesh</div>
-          <h1>A body. A city. A system that remembers.</h1>
+          <h1>A body. A city.<br />A system that remembers.</h1>
           <p class="lead">The first public fragment from The Price of Flesh opens through video, story, art, music, and response.</p>
           <p class="lead">Luna Ghani stands at the threshold of a world where the body is no longer private - it is record, currency, memory, and claim.</p>
           <p class="micro-line">Video release pending. The archive file is open.</p>
@@ -1000,38 +1023,38 @@
 
         <div class="doors-grid" aria-label="Archive routes">
           <article class="door-card">
-            <span class="door-status">Preparing</span>
-            <h3>Watch the fragment</h3>
+            <span class="door-status preparing">Preparing</span>
+            <h3>Watch the Fragment</h3>
             <p>The cinematic release will open here when the video goes live.</p>
-            <button class="button" type="button" data-open-modal="video">Open player</button>
+            <button class="button" type="button" data-open-modal="video">Open Player</button>
           </article>
 
           <article class="door-card">
-            <span class="door-status">Open soon</span>
-            <h3>Read the story</h3>
+            <span class="door-status incoming">Open Soon</span>
+            <h3>Read the Story</h3>
             <p>The written archive entry expands the world behind Luna Ghani.</p>
-            <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked open soon.">Read status</button>
+            <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked open soon.">Read Status</button>
           </article>
 
           <article class="door-card">
             <span class="door-status opening">Opening</span>
-            <h3>Explore art</h3>
+            <h3>Explore Art</h3>
             <p>Character files, world images, objects, and visual fragments from the archive.</p>
             <a class="button secondary" href="#archive">Explore art</a>
           </article>
 
           <article class="door-card">
-            <span class="door-status">Preparing</span>
-            <h3>Hear the signal</h3>
+            <span class="door-status preparing">Preparing</span>
+            <h3>Hear the Signal</h3>
             <p>Music, signal loops, atmosphere, and sound fragments from the world.</p>
-            <button class="button locked" type="button" data-status-message="Music signals are preparing. No public audio link is live yet.">Music status</button>
+            <button class="button locked" type="button" data-status-message="Music signals are preparing. No public audio link is live yet.">Music Status</button>
           </article>
 
           <article class="door-card">
             <span class="door-status active">Active</span>
-            <h3>Follow the next door</h3>
+            <h3>Follow the Next Door</h3>
             <p>Your response helps decide which fragment opens next.</p>
-            <a class="button secondary" href="#signal">Leave signal</a>
+            <a class="button" href="#signal">Leave Signal</a>
           </article>
         </div>
       </div>
@@ -1041,7 +1064,7 @@
       <div class="wrap">
         <div class="kicker">Explore the Archive</div>
         <h2>Revealed Cosmos fragments.</h2>
-        <p class="section-intro">This archive will grow through films, stories, art, music, panels, and world files. Start with Luna Ghani. The next doors open as releases are prepared.</p>
+        <p class="section-intro">The archive grows through films, stories, art, music, panels, and world files. Start with Luna Ghani. The next doors open as releases are prepared.</p>
 
         <div class="library-grid" aria-label="Archive library">
           <article class="library-card active">
@@ -1053,7 +1076,7 @@
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
                 <button class="button locked" type="button" data-status-message="The written story link is not ready yet.">Read</button>
-                <a class="button secondary" href="#archive">Art</a>
+                <a class="button secondary" href="#archive">Explore Art</a>
                 <button class="button secondary" type="button" data-open-modal="luna">About this story</button>
               </div>
             </div>
@@ -1061,27 +1084,27 @@
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Next visual file incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Next Visual File</h3><p>Character and world images will be added after the Luna release expands.</p><a class="button locked" href="#signal">Follow unlock</a></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Next Visual File</h3><p>Character and world images will be added after the Luna release expands.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Music signals incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Music Signals</h3><p>Sound loops, score fragments, and atmosphere from the archive.</p><a class="button locked" href="#signal">Follow unlock</a></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Music Signals</h3><p>Sound loops, score fragments, and atmosphere from the archive.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Panel chapters incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Panel Chapters</h3><p>Some stories may return as comic panels, carousels, or visual sequences.</p><a class="button locked" href="#signal">Follow unlock</a></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Panel Chapters</h3><p>Some stories may return as comic panels, carousels, or visual sequences.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Story files incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Story Files</h3><p>Written archive entries and short fragments from the larger world.</p><a class="button locked" href="#signal">Follow unlock</a></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Story Files</h3><p>Written archive entries and short fragments from the larger world.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="World index locked"></div>
-            <div class="library-body"><div class="tag">Locked</div><h3>World Index</h3><p>More worlds will open after the first release signal returns.</p><a class="button locked" href="#signal">Follow unlock</a></div>
+            <div class="library-body"><div class="tag">Locked</div><h3>World Index</h3><p>More worlds will open after the first release signal returns.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
         </div>
       </div>
@@ -1095,22 +1118,25 @@
           <p>Writer / narrative designer / linguist / solo creative director</p>
           <ul class="bio-list">
             <li>Original story worlds</li>
-            <li>Cinematic archive fragments</li>
-            <li>Language, memory, identity, and hidden systems</li>
-            <li>Human-led direction</li>
+            <li>Psychopunk, memory, identity, and hidden systems</li>
+            <li>Cinematic fragments and visual archive direction</li>
+            <li>Language, structure, and narrative clarity</li>
+            <li>Human-led AI-assisted visualization</li>
           </ul>
         </aside>
 
         <div class="about-copy">
           <div class="kicker">About the Archive</div>
-          <h2>Written first. Visualized second.</h2>
+          <h2>Written first.<br />Visualized second.</h2>
+          <p>If the world around you has ever felt less simple than it appears, you are already close to psychopunk.</p>
           <p>Revealed Cosmos is my public archive of original worlds at the edge of science fiction, dream, memory, and strange reality.</p>
-          <p>I have been writing these stories for more than ten years. The first fragment came from a dream and was written down in a notebook. From there, the world began to grow: a place where ordinary life sometimes breaks open and something larger becomes visible underneath.</p>
+          <p>I have been writing these stories for more than ten years. The first fragment came from a dream and was written down in a notebook. From there, the world began to grow: ordinary life breaking open, hidden systems showing through, and characters caught between what they remember and what the world allows them to know.</p>
           <p>You can enter without preparation - as science fiction, as a journey, as a strange dream, or as a recovered piece of memory.</p>
-          <p>Psychopunk is fiction about inner experience, hidden systems, intersecting realities, and the first question behind the archive: What if the world is arranged differently than it appears?</p>
+          <p>Psychopunk is fiction about inner experience, hidden systems, intersecting realities, and the question behind the archive:</p>
+          <p>What if the world is arranged differently than it appears?</p>
           <p>I write the fragments, design the world logic, shape the visual tone, curate the final images, and decide how each release enters the archive.</p>
           <p>AI-assisted tools help visualize scenes as a solo creator. The story direction, world logic, text, editing, music direction, curation, and final selection are human-led.</p>
-          <p class="ending-line">Old texts are being revised. New fragments are preparing to open.</p>
+          <p class="ending-line">New fragments are preparing to open.</p>
         </div>
       </div>
     </section>
@@ -1271,10 +1297,10 @@
       return [
         '<p class="modal-copy">The first public fragment from The Price of Flesh. Luna Ghani stands at the threshold of a world where flesh, memory, beauty, and ownership are no longer separate.</p>',
         '<div class="buttons">',
-        '<button class="button" type="button" data-open-modal="video">Open player</button>',
+        '<button class="button" type="button" data-open-modal="video">Open Player</button>',
         '<button class="button locked" type="button" data-status-message="The written story link is not ready yet.">Read story</button>',
         '<a class="button secondary" href="#archive">Explore art</a>',
-        '<a class="button secondary" href="#signal">Leave signal</a>',
+        '<a class="button" href="#signal">Leave Signal</a>',
         '</div>'
       ].join('');
     }
@@ -1336,7 +1362,7 @@
       if (!modal || !modalTitle || !modalBody) return;
       lastFocusedElement = document.activeElement;
       modalTitle.textContent = 'Archive Status';
-      modalBody.innerHTML = '<p class="modal-copy">' + message + '</p><div class="buttons"><a class="button secondary" href="#signal">Leave signal</a></div>';
+      modalBody.innerHTML = '<p class="modal-copy">' + message + '</p><div class="buttons"><a class="button" href="#signal">Leave Signal</a></div>';
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
