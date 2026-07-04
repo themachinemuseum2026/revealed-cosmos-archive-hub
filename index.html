@@ -265,8 +265,9 @@
     }
 
     h1 {
-      font-size: clamp(42px, 5.05vw, 68px);
+      font-size: clamp(38px, 4.45vw, 60px);
       margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
     h2 {
@@ -356,16 +357,16 @@
     .button:focus-visible::before { transform: translateX(130%); }
 
     .button.secondary {
-      border-color: rgba(117,213,244,.36);
-      background: rgba(117,213,244,.055);
-      color: #d9f3fb;
+      border-color: rgba(255,255,255,.18);
+      background: rgba(255,255,255,.045);
+      color: #d8e2e6;
     }
 
     .button.locked {
-      border-color: rgba(117,213,244,.28);
-      color: #accbd4;
-      background: rgba(255,255,255,.045);
-      box-shadow: inset 0 0 18px rgba(117,213,244,.07);
+      border-color: rgba(117,213,244,.34);
+      color: #b7dce6;
+      background: rgba(117,213,244,.065);
+      box-shadow: inset 0 0 18px rgba(117,213,244,.09);
     }
 
     .button[disabled] {
@@ -621,7 +622,10 @@
     }
 
     .library-card.active {
-      grid-column: span 2;
+      grid-column: 1 / -1;
+      min-height: 360px;
+      grid-template-columns: minmax(320px, .95fr) minmax(0, 1.05fr);
+      grid-template-rows: auto;
     }
 
     .library-art {
@@ -654,6 +658,12 @@
       background-position: center 42%;
     }
 
+    .library-card.active .library-art {
+      min-height: 360px;
+      border-bottom: 0;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+
     .library-art::before,
     .library-art::after {
       content: "";
@@ -675,6 +685,11 @@
       align-content: start;
       gap: 12px;
       padding: clamp(22px, 2vw, 28px);
+    }
+
+    .library-card.active .library-body {
+      align-content: center;
+      padding: clamp(28px, 3vw, 42px);
     }
 
     .tag {
@@ -943,7 +958,8 @@
 
       nav { justify-content: flex-start; }
       .doors-grid, .library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .library-card.active { grid-column: span 2; }
+      .library-card.active { grid-column: 1 / -1; grid-template-columns: 1fr; grid-template-rows: 260px minmax(0, 1fr); }
+      .library-card.active .library-art { min-height: 260px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); }
       .split, .contact-grid { grid-template-columns: 1fr; }
     }
 
@@ -964,7 +980,8 @@
       .buttons { flex-direction: column; align-items: stretch; }
       .button { width: 100%; }
       .doors-grid, .library-grid { grid-template-columns: 1fr; }
-      .library-card.active { grid-column: span 1; }
+      .library-card.active { grid-column: span 1; grid-template-rows: 220px minmax(0, 1fr); }
+      .library-card.active .library-art { min-height: 220px; }
       .door-card { min-height: 0; }
       .video-bay { padding: 10px; }
       .video-screen { padding: 16px; min-height: 62vw; }
@@ -1003,7 +1020,7 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <div class="kicker">Luna Ghani / The Price of Flesh</div>
-          <h1>A body. A city.<br />A system that remembers.</h1>
+          <h1>A BODY. A CITY.<br />A SYSTEM THAT REMEMBERS.</h1>
           <p class="lead">The first public fragment from The Price of Flesh opens through video, story, art, music, and response.</p>
           <p class="lead">Luna Ghani stands at the threshold of a world where the body is no longer private - it is record, currency, memory, and claim.</p>
           <p class="micro-line">Video release pending. The archive file is open.</p>
@@ -1080,8 +1097,8 @@
     <section id="archive">
       <div class="wrap">
         <div class="kicker">Explore the Archive</div>
-        <h2>Revealed Cosmos fragments.</h2>
-        <p class="section-intro">The archive grows through films, stories, art, music, panels, and world files. Start with Luna Ghani. The next doors open as releases are prepared.</p>
+        <h2>REVEALED COSMOS FRAGMENTS</h2>
+        <p class="section-intro">The archive opens through films, stories, visual chapters, music, and world files. Start with Luna Ghani. The next doors open as releases are prepared.</p>
 
         <div class="library-grid" aria-label="Archive library">
           <article class="library-card active">
@@ -1092,36 +1109,36 @@
               <p>A body, a city, and a system that learned to own both.</p>
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
-                <button class="button locked" type="button" data-status-message="The written story link is not ready yet.">Read</button>
-                <a class="button secondary" href="#archive">Explore Art</a>
-                <button class="button secondary" type="button" data-open-modal="luna">About this story</button>
+                <a class="button" href="#doors">Read</a>
+                <a class="button" href="#archive-categories">Explore Art</a>
+                <button class="button" type="button" data-open-modal="luna">About this story</button>
               </div>
             </div>
           </article>
 
+          <article id="archive-categories" class="library-card">
+            <div class="library-art" role="img" aria-label="Visual chapters incoming"></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+          </article>
+
           <article class="library-card">
-            <div class="library-art" role="img" aria-label="Next visual file incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Next Visual File</h3><p>Character and world images will be added after the Luna release expands.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-art" role="img" aria-label="Comic books incoming"></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Comic Books</h3><p>Some fragments may return as comic files, carousel chapters, or panel sequences.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Music signals incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Music Signals</h3><p>Sound loops, score fragments, and atmosphere from the archive.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Music Signals</h3><p>Score fragments, atmosphere, signal loops, and music from the worlds.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
-            <div class="library-art" role="img" aria-label="Panel chapters incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Panel Chapters</h3><p>Some stories may return as comic panels, carousels, or visual sequences.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-art" role="img" aria-label="Full stories incoming"></div>
+            <div class="library-body"><div class="tag">Incoming</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
 
           <article class="library-card">
-            <div class="library-art" role="img" aria-label="Story files incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Story Files</h3><p>Written archive entries and short fragments from the larger world.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
-          </article>
-
-          <article class="library-card">
-            <div class="library-art" role="img" aria-label="World index locked"></div>
-            <div class="library-body"><div class="tag">Locked</div><h3>World Index</h3><p>More worlds will open after the first release signal returns.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-art" role="img" aria-label="World Alive locked"></div>
+            <div class="library-body"><div class="tag">Locked</div><h3>World Alive</h3><p>Social fragments, community signals, Instagram-style world moments, and future public doors.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
           </article>
         </div>
       </div>
@@ -1138,22 +1155,22 @@
             <li>Psychopunk, memory, identity, and hidden systems</li>
             <li>Cinematic fragments and visual archive direction</li>
             <li>Language, structure, and narrative clarity</li>
-            <li>Human-led AI-assisted visualization</li>
+            <li>Human-led visual direction</li>
           </ul>
         </aside>
 
         <div class="about-copy">
           <div class="kicker">About the Archive</div>
-          <h2>Written first.<br />Visualized second.</h2>
+          <h2>YOU ARE ALREADY CLOSE TO PSYCHOPUNK.</h2>
           <p>If the world around you has ever felt less simple than it appears, you are already close to psychopunk.</p>
-          <p>Revealed Cosmos is my public archive of original worlds at the edge of science fiction, dream, memory, and strange reality.</p>
+          <p>Revealed Cosmos is a public archive of original worlds at the edge of science fiction, dream, memory, and strange reality.</p>
+          <p>Psychopunk is fiction about inner experience, hidden systems, intersecting realities, and the feeling that ordinary life is only the visible layer of something larger.</p>
           <p>I have been writing these stories for more than ten years. The first fragment came from a dream and was written down in a notebook. From there, the world began to grow: ordinary life breaking open, hidden systems showing through, and characters caught between what they remember and what the world allows them to know.</p>
           <p>You can enter without preparation - as science fiction, as a journey, as a strange dream, or as a recovered piece of memory.</p>
-          <p>Psychopunk is fiction about inner experience, hidden systems, intersecting realities, and the question behind the archive:</p>
+          <p>The question behind the archive is simple:</p>
           <p>What if the world is arranged differently than it appears?</p>
           <p>I write the fragments, design the world logic, shape the visual tone, curate the final images, and decide how each release enters the archive.</p>
-          <p>AI-assisted tools help visualize scenes as a solo creator. The story direction, world logic, text, editing, music direction, curation, and final selection are human-led.</p>
-          <p class="ending-line">New fragments are preparing to open.</p>
+          <p class="ending-line">NEW FRAGMENTS ARE PREPARING TO OPEN.</p>
         </div>
       </div>
     </section>
@@ -1162,7 +1179,7 @@
       <div class="wrap contact-grid">
         <div>
           <div class="kicker">Leave a Signal</div>
-          <h2>Tell the archive what opened.</h2>
+          <h2>TELL THE ARCHIVE WHAT OPENED.</h2>
           <p class="section-intro">If Luna stayed with you, tell me what you want opened next: the video, the story, the art, the music, the panels, or another world.</p>
           <p class="qualifier">For professional narrative design inquiries, use the Studio route. For this fragment, just leave the signal.</p>
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
@@ -1173,18 +1190,6 @@
             <input type="checkbox" name="botcheck" id="botcheck" class="honeypot" tabindex="-1" autocomplete="off" />
             <div><label for="name">Name / handle</label><input id="name" name="name" type="text" placeholder="Your name or handle" autocomplete="name" required /></div>
             <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required /></div>
-            <div>
-              <label for="signalType">Signal type</label>
-              <select id="signalType" name="signal_type">
-                <option>I want the Luna video</option>
-                <option>I want the written story</option>
-                <option>I want more art</option>
-                <option>I want music / atmosphere</option>
-                <option>I want panels / comic sequence</option>
-                <option>I have a theory</option>
-                <option>I have a professional inquiry</option>
-              </select>
-            </div>
             <div>
               <label for="entryFrom">Where did you enter from?</label>
               <select id="entryFrom" name="entry_from">
@@ -1197,7 +1202,7 @@
                 <option>Other</option>
               </select>
             </div>
-            <div><label for="message">What should the archive open next?</label><textarea id="message" name="message" placeholder="A door, image, theory, sound, scene, or world rule you want opened next." required></textarea></div>
+            <div><label for="message">What should the archive open next?</label><textarea id="message" name="message" placeholder="Share what you want next, what stayed with you, or any feedback for the archive." required></textarea></div>
             <button id="submitButton" class="button" type="submit">Leave Signal</button>
             <p id="formStatus" class="form-status" aria-live="polite">Signal draft: this static form opens an email draft to revealedcosmosstudio@gmail.com.</p>
           </form>
@@ -1207,7 +1212,7 @@
   </main>
 
   <footer>
-    <div class="wrap">Original story worlds. Human-written. Human-directed. AI-assisted visualization. <a href="#top">Watch</a> / <a href="#doors">Read</a> / <a href="#archive">Art</a> / <a href="#doors">Music</a> / <a href="#signal">Leave a signal</a></div>
+    <div class="wrap">Original story worlds. Written and directed by Aaron. Visual archive direction and final curation. <a href="#top">Watch</a> / <a href="#doors">Read</a> / <a href="#archive">Art</a> / <a href="#doors">Music</a> / <a href="#signal">Leave a signal</a></div>
   </footer>
 
   <button id="backToTop" type="button" aria-label="Back to top">Top</button>
@@ -1216,7 +1221,7 @@
     <div class="modal-shell" role="document">
       <div class="modal-head">
         <h2 id="modalTitle" class="modal-title">Archive Player</h2>
-        <button id="modalClose" class="modal-close" type="button" aria-label="Close modal">Close</button>
+        <button id="modalClose" class="modal-close" type="button" aria-label="Close modal">X</button>
       </div>
       <div id="modalBody" class="modal-body"></div>
     </div>
@@ -1233,16 +1238,6 @@
     const modalBody = document.getElementById('modalBody');
     const modalClose = document.getElementById('modalClose');
     let lastFocusedElement = null;
-
-    const messagePrompts = {
-      'I want the Luna video': 'What do you want the Luna video release to focus on?',
-      'I want the written story': 'What do you want the written story to explain or reveal?',
-      'I want more art': 'Which character, city, object, or scene should open next?',
-      'I want music / atmosphere': 'What should the archive sound like?',
-      'I want panels / comic sequence': 'What panel, scene, or carousel should the archive open?',
-      'I have a theory': 'What theory, question, or signal did Luna leave with you?',
-      'I have a professional inquiry': 'Briefly describe the professional inquiry and what kind of response would help.'
-    };
 
     function cleanUrl() {
       if (history.replaceState) history.replaceState(null, '', window.location.pathname + window.location.search);
@@ -1312,11 +1307,10 @@
 
     function lunaMarkup() {
       return [
-        '<p class="modal-copy">The first public fragment from The Price of Flesh. Luna Ghani stands at the threshold of a world where flesh, memory, beauty, and ownership are no longer separate.</p>',
+        '<p class="modal-copy">The first public fragment from The Price of Flesh. Luna Ghani stands at the threshold of a world where the body is no longer private - it is record, currency, memory, and claim.</p>',
+        '<p class="modal-copy">This is not the whole story. It is the first door.</p>',
         '<div class="buttons">',
         '<button class="button" type="button" data-open-modal="video">Open Player</button>',
-        '<button class="button locked" type="button" data-status-message="The written story link is not ready yet.">Read story</button>',
-        '<a class="button secondary" href="#archive">Explore art</a>',
         '<a class="button" href="#signal">Leave Signal</a>',
         '</div>'
       ].join('');
@@ -1408,22 +1402,12 @@
     window.addEventListener('resize', updateScrollOffset);
     window.addEventListener('orientationchange', () => setTimeout(updateScrollOffset, 250));
 
-    function updateMessagePlaceholder() {
-      const signalType = document.getElementById('signalType');
-      const message = document.getElementById('message');
-      if (!signalType || !message) return;
-      message.placeholder = messagePrompts[signalType.value] || 'What should the archive open next?';
-    }
-
     function setFormStatus(message, type = '') {
       const status = document.getElementById('formStatus');
       if (!status) return;
       status.textContent = message;
       status.className = 'form-status' + (type ? ' ' + type : '');
     }
-
-    const signalType = document.getElementById('signalType');
-    if (signalType) signalType.addEventListener('change', updateMessagePlaceholder);
 
     function submitSignalDraft(event) {
       if (event) event.preventDefault();
@@ -1437,7 +1421,6 @@
 
       const name = fieldValue('name');
       const email = fieldValue('email');
-      const selectedSignal = fieldValue('signalType');
       const entryFrom = fieldValue('entryFrom');
       const message = fieldValue('message');
 
@@ -1450,7 +1433,6 @@
       const body = [
         'Name / handle: ' + name,
         'Email: ' + email,
-        'Signal type: ' + selectedSignal,
         'Entered from: ' + entryFrom,
         '',
         'What should the archive open next?',
@@ -1484,7 +1466,6 @@
     window.addEventListener('pageshow', (event) => { if (event.persisted) scrollToInitialHash(); });
     updateScrollOffset();
     updateBackToTop();
-    updateMessagePlaceholder();
   </script>
 </body>
 </html>
