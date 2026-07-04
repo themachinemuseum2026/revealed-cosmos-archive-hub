@@ -25,7 +25,7 @@
       --quiet: rgba(255, 255, 255, .07);
       --line: rgba(255, 255, 255, .12);
       --gold-line: rgba(216, 163, 93, .36);
-      --max: 1200px;
+      --max: 1160px;
       --radius: 8px;
       --shadow: 0 22px 72px rgba(0, 0, 0, .5);
       --scroll-offset: 96px;
@@ -116,7 +116,7 @@
     }
 
     .nav {
-      width: min(1320px, calc(100% - clamp(28px, 5vw, 60px)));
+      width: min(var(--max), calc(100% - clamp(28px, 5vw, 60px)));
       min-height: 72px;
       margin: 0 auto;
       display: flex;
@@ -198,7 +198,7 @@
 
     section {
       position: relative;
-      padding: clamp(60px, 5.6vw, 76px) 0;
+      padding: clamp(52px, 5vw, 68px) 0;
       border-bottom: 1px solid rgba(255,255,255,.09);
       scroll-margin-top: var(--scroll-offset);
     }
@@ -217,7 +217,7 @@
     section > .wrap { position: relative; z-index: 1; }
 
     .hero {
-      padding: clamp(34px, 4.2vw, 60px) 0 clamp(48px, 4.8vw, 68px);
+      padding: clamp(28px, 3.4vw, 46px) 0 clamp(42px, 4vw, 56px);
       min-height: 0;
       display: grid;
       align-items: center;
@@ -237,15 +237,15 @@
     }
 
     .hero-inner {
-      width: min(1360px, calc(100% - clamp(32px, 4vw, 56px)));
+      width: min(var(--max), calc(100% - clamp(32px, 4vw, 56px)));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, .38fr) minmax(520px, .62fr);
-      gap: clamp(28px, 4vw, 56px);
+      grid-template-columns: minmax(0, .42fr) minmax(500px, .58fr);
+      gap: clamp(26px, 3.2vw, 44px);
       align-items: center;
     }
 
-    .hero-copy { max-width: 580px; }
+    .hero-copy { max-width: 500px; }
 
     .kicker {
       color: var(--gold-strong);
@@ -260,19 +260,19 @@
     h1, h2, h3 {
       margin: 0;
       letter-spacing: 0;
-      line-height: 1.04;
+      line-height: 1.03;
       text-wrap: balance;
     }
 
     h1 {
-      font-size: clamp(38px, 4.45vw, 60px);
-      margin-bottom: 20px;
+      font-size: clamp(34px, 3.9vw, 52px);
+      margin-bottom: 18px;
       text-transform: uppercase;
     }
 
     h2 {
       max-width: 860px;
-      font-size: clamp(34px, 4vw, 52px);
+      font-size: clamp(32px, 3.4vw, 48px);
       margin-bottom: 16px;
     }
 
@@ -293,7 +293,7 @@
       line-height: 1.62;
     }
 
-    .lead { max-width: 620px; }
+    .lead { max-width: 560px; }
     .section-intro { max-width: 840px; margin-bottom: 28px; }
     .micro-line {
       color: var(--gold-strong);
@@ -314,7 +314,7 @@
 
     .button {
       position: relative;
-      min-height: 50px;
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -324,7 +324,7 @@
         linear-gradient(180deg, rgba(244,201,130,.27), rgba(216,163,93,.11)),
         linear-gradient(90deg, rgba(216,163,93,.08), rgba(117,213,244,.06));
       color: var(--text);
-      font-size: 14.75px;
+      font-size: 13.6px;
       font-weight: 900;
       letter-spacing: .8px;
       line-height: 1.2;
@@ -578,25 +578,25 @@
     .doors-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 16px;
+      gap: 18px;
       margin-top: 28px;
       align-items: stretch;
     }
 
     .door-card {
-      min-height: 282px;
+      min-height: 318px;
       display: grid;
       grid-template-rows: auto auto 1fr auto;
       align-content: stretch;
-      gap: 14px;
-      padding: clamp(22px, 2vw, 28px);
+      gap: 16px;
+      padding: clamp(24px, 2.2vw, 32px);
     }
 
     .door-card p,
     .library-card p {
       color: #dcd4c8;
-      font-size: 16.2px;
-      line-height: 1.62;
+      font-size: 16.4px;
+      line-height: 1.66;
       margin-bottom: 0;
     }
 
@@ -609,7 +609,7 @@
 
     .library-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 18px;
       margin-top: 28px;
     }
@@ -617,16 +617,21 @@
     .library-card {
       min-height: 306px;
       display: grid;
+      grid-column: span 2;
       grid-template-rows: 128px minmax(0, 1fr);
       overflow: hidden;
     }
 
     .library-card.active {
       grid-column: 1 / -1;
-      min-height: 360px;
-      grid-template-columns: minmax(320px, .95fr) minmax(0, 1.05fr);
+      min-height: 382px;
+      grid-template-columns: minmax(360px, .95fr) minmax(0, 1.05fr);
       grid-template-rows: auto;
+      border-color: rgba(216,163,93,.28);
     }
+
+    .library-card:nth-last-child(2) { grid-column: 2 / span 2; }
+    .library-card:last-child { grid-column: 4 / span 2; }
 
     .library-art {
       position: relative;
@@ -659,7 +664,7 @@
     }
 
     .library-card.active .library-art {
-      min-height: 360px;
+      min-height: 382px;
       border-bottom: 0;
       border-right: 1px solid rgba(255,255,255,.1);
     }
@@ -683,7 +688,7 @@
     .library-body {
       display: grid;
       align-content: start;
-      gap: 12px;
+      gap: 13px;
       padding: clamp(22px, 2vw, 28px);
     }
 
@@ -717,7 +722,12 @@
     .contact-grid {
       display: grid;
       grid-template-columns: .78fr 1.22fr;
-      gap: clamp(28px, 4vw, 48px);
+      gap: clamp(30px, 4vw, 46px);
+      align-items: start;
+    }
+
+    .split {
+      grid-template-columns: .82fr 1.18fr;
       align-items: start;
     }
 
@@ -743,6 +753,15 @@
       color: var(--muted);
       font-size: 16.4px;
       line-height: 1.6;
+    }
+
+    .about-copy {
+      max-width: 760px;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(30px, 3vw, 42px);
+      line-height: 1.08;
     }
 
     .bio-list {
@@ -807,12 +826,35 @@
 
     .honeypot { display: none !important; }
     .qualifier, .direct-email-note, .form-status { color: var(--soft); font-size: 15.5px; line-height: 1.5; }
+    .qualifier { max-width: 34rem; font-size: 14.5px; opacity: .74; }
     .direct-email-note { margin-top: 16px; }
     .direct-email-note span { display: block; margin-bottom: 5px; }
     .direct-email-note a { color: var(--cyan); font-weight: 900; overflow-wrap: anywhere; }
     .form-status { margin: -2px 0 0; }
     .form-status.error { color: #f0aa9b; }
     .form-status.success { color: #aee8c8; }
+
+    .social-routes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .social-link {
+      min-height: 38px;
+      border: 1px solid rgba(117,213,244,.22);
+      background: rgba(117,213,244,.045);
+      color: #a9c8d1;
+      padding: 9px 11px;
+      font-family: var(--heading);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      cursor: not-allowed;
+      opacity: .76;
+    }
 
     .modal {
       position: fixed;
@@ -957,7 +999,9 @@
       }
 
       nav { justify-content: flex-start; }
-      .doors-grid, .library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .doors-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .library-card, .library-card:nth-last-child(2), .library-card:last-child { grid-column: span 1; }
       .library-card.active { grid-column: 1 / -1; grid-template-columns: 1fr; grid-template-rows: 260px minmax(0, 1fr); }
       .library-card.active .library-art { min-height: 260px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); }
       .split, .contact-grid { grid-template-columns: 1fr; }
@@ -974,12 +1018,13 @@
       .nav-cta { width: 100%; text-align: center; }
       section { padding: 48px 0; }
       .hero { padding-top: 28px; }
-      h1 { font-size: clamp(34px, 11vw, 46px); }
-      h2 { font-size: clamp(28px, 8vw, 38px); }
-      .lead, .section-intro, .about-copy p { font-size: 16.5px; }
+      h1 { font-size: clamp(30px, 9.2vw, 40px); line-height: 1.05; }
+      h2 { font-size: clamp(27px, 7.5vw, 36px); }
+      .lead, .section-intro, .about-copy p { font-size: 16.4px; }
       .buttons { flex-direction: column; align-items: stretch; }
       .button { width: 100%; }
       .doors-grid, .library-grid { grid-template-columns: 1fr; }
+      .library-card, .library-card:nth-last-child(2), .library-card:last-child { grid-column: span 1; }
       .library-card.active { grid-column: span 1; grid-template-rows: 220px minmax(0, 1fr); }
       .library-card.active .library-art { min-height: 220px; }
       .door-card { min-height: 0; }
@@ -1052,42 +1097,42 @@
     <section id="doors">
       <div class="wrap">
         <div class="kicker">Archive Doors</div>
-        <h2>Choose your door.</h2>
+        <h2>CHOOSE YOUR DOOR.</h2>
         <p class="section-intro">Watch, read, explore, listen, or follow. Each route opens the archive from a different angle.</p>
 
         <div class="doors-grid" aria-label="Archive routes">
           <article class="door-card">
-            <span class="door-status preparing">Preparing</span>
+            <span class="door-status active">Active</span>
             <h3>Watch the Fragment</h3>
-            <p>The cinematic release will open here when the video goes live.</p>
+            <p>The cinematic release opens here when the video goes live.</p>
             <button class="button" type="button" data-open-modal="video">Open Player</button>
           </article>
 
           <article class="door-card">
-            <span class="door-status incoming">Open Soon</span>
+            <span class="door-status incoming">Opening Soon</span>
             <h3>Read the Story</h3>
             <p>The written archive entry expands the world behind Luna Ghani.</p>
             <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked open soon.">Read Status</button>
           </article>
 
           <article class="door-card">
-            <span class="door-status opening">Opening</span>
+            <span class="door-status active">Active</span>
             <h3>Explore Art</h3>
             <p>Character files, world images, objects, and visual fragments from the archive.</p>
-            <a class="button secondary" href="#archive">Explore art</a>
+            <a class="button" href="#archive">Explore Art</a>
           </article>
 
           <article class="door-card">
-            <span class="door-status preparing">Preparing</span>
+            <span class="door-status incoming">Opening Soon</span>
             <h3>Hear the Signal</h3>
-            <p>Music, signal loops, atmosphere, and sound fragments from the world.</p>
+            <p>Music, atmosphere, and sound fragments from the archive.</p>
             <button class="button locked" type="button" data-status-message="Music signals are preparing. No public audio link is live yet.">Music Status</button>
           </article>
 
           <article class="door-card">
             <span class="door-status active">Active</span>
             <h3>Follow the Next Door</h3>
-            <p>Your response helps decide which fragment opens next.</p>
+            <p>Follow the public routes and leave a signal for what should open next.</p>
             <a class="button" href="#signal">Leave Signal</a>
           </article>
         </div>
@@ -1109,7 +1154,7 @@
               <p>A body, a city, and a system that learned to own both.</p>
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
-                <a class="button" href="#doors">Read</a>
+                <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked opening soon.">Read</button>
                 <a class="button" href="#archive-categories">Explore Art</a>
                 <button class="button" type="button" data-open-modal="luna">About this story</button>
               </div>
@@ -1181,8 +1226,15 @@
           <div class="kicker">Leave a Signal</div>
           <h2>TELL THE ARCHIVE WHAT OPENED.</h2>
           <p class="section-intro">If Luna stayed with you, tell me what you want opened next: the video, the story, the art, the music, the panels, or another world.</p>
-          <p class="qualifier">For professional narrative design inquiries, use the Studio route. For this fragment, just leave the signal.</p>
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
+          <div class="social-routes" aria-label="Social routes preparing">
+            <button class="social-link" type="button" disabled>YouTube</button>
+            <button class="social-link" type="button" disabled>Instagram</button>
+            <button class="social-link" type="button" disabled>TikTok</button>
+            <button class="social-link" type="button" disabled>X / Threads</button>
+            <button class="social-link" type="button" disabled>Link Hub</button>
+          </div>
+          <p class="qualifier">Social routes are preparing. Direct email is open now.</p>
         </div>
 
         <div class="contact-panel">
