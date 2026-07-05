@@ -276,7 +276,7 @@
 
     h2 {
       max-width: 860px;
-      font-size: clamp(32px, 3.4vw, 48px);
+      font-size: clamp(30px, 3vw, 44px);
       margin-bottom: 16px;
     }
 
@@ -293,8 +293,8 @@
     .section-intro,
     .about-copy p {
       color: #e0d8cb;
-      font-size: clamp(17px, .34vw + 16px, 19px);
-      line-height: 1.62;
+      font-size: clamp(17.4px, .34vw + 16.2px, 19.4px);
+      line-height: 1.66;
     }
 
     .lead { max-width: 560px; }
@@ -619,9 +619,19 @@
     .door-card p,
     .library-card p {
       color: #dcd4c8;
-      font-size: 16.4px;
-      line-height: 1.66;
+      font-size: 16.8px;
+      line-height: 1.68;
       margin-bottom: 0;
+    }
+
+    .door-card h3,
+    .library-card h3 {
+      font-size: clamp(20px, .5vw + 18px, 25px);
+      line-height: 1.08;
+    }
+
+    .door-card h3.compact-title {
+      font-size: clamp(18px, .42vw + 17px, 22px);
     }
 
     .door-card .button {
@@ -1069,9 +1079,9 @@
       </a>
       <nav aria-label="Main navigation">
         <button type="button" data-open-modal="video">Watch</button>
-        <button type="button" data-status-message="Story archive preparing.">Read</button>
+        <a href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a>
         <button type="button" data-status-message="Soundtrack signal preparing.">Listen / Soundtracks</button>
-        <button type="button" data-status-message="Visual archive preparing.">Explore Art</button>
+        <a href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore Art</a>
         <a class="nav-cta" href="#signal">Leave a Signal</a>
       </nav>
     </div>
@@ -1088,8 +1098,8 @@
           <p class="micro-line">VIDEO FRAGMENT OPEN.</p>
           <div class="buttons" aria-label="Hero actions">
             <button class="button" type="button" data-open-modal="video">Watch / Open Player</button>
-            <a class="button secondary" href="#doors">Read the Story</a>
-            <a class="button secondary" href="#archive">Explore Art</a>
+            <a class="button secondary" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read the Story</a>
+            <a class="button secondary" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore Art</a>
             <a class="button secondary" href="#signal">Leave a Signal</a>
           </div>
         </div>
@@ -1125,30 +1135,30 @@
             <button class="button" type="button" data-open-modal="video">Open Player</button>
           </article>
 
-          <article class="door-card inactive">
-            <span class="door-status incoming">Coming Soon</span>
-            <h3>Read the Story</h3>
-            <p>The written archive entry expands the world behind Luna Ghani.</p>
-            <button class="button locked" type="button" data-status-message="Story archive preparing.">View Status</button>
+          <article class="door-card">
+            <span class="door-status active">Active</span>
+            <h3>Read Stories</h3>
+            <p>Written archive entries and story fragments expand the world behind Luna Ghani.</p>
+            <a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read on Medium</a>
           </article>
 
-          <article class="door-card inactive">
-            <span class="door-status incoming">Preparing</span>
+          <article class="door-card">
+            <span class="door-status active">Active</span>
             <h3>Explore Art</h3>
             <p>Character files, world images, objects, and visual fragments from the archive.</p>
-            <button class="button locked" type="button" data-status-message="Visual archive preparing.">View Status</button>
+            <a class="button" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore Art</a>
           </article>
 
           <article class="door-card inactive">
             <span class="door-status incoming">Preparing</span>
-            <h3>Hear the Signal / Soundtracks</h3>
+            <h3 class="compact-title">Hear the Signal / Soundtracks</h3>
             <p>Music, atmosphere, and sound fragments from the archive.</p>
             <button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button>
           </article>
 
           <article class="door-card">
             <span class="door-status active">Active</span>
-            <h3>Follow the Next Door</h3>
+            <h3>Follow on Socials</h3>
             <p>Follow the public routes and leave a signal for what should open next.</p>
             <a class="button" href="#signal">Leave Signal</a>
           </article>
@@ -1171,15 +1181,15 @@
               <p>A forbidden identity implant opens a door the city was never meant to forgive.</p>
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
-                <button class="button locked" type="button" data-status-message="Story archive preparing.">Read</button>
-                <button class="button locked" type="button" data-status-message="Visual archive preparing.">Explore Art</button>
+                <a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a>
+                <a class="button" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore Art</a>
               </div>
             </div>
           </article>
 
           <article id="archive-categories" class="library-card inactive">
             <div class="library-art" role="img" aria-label="Visual chapters incoming"></div>
-            <div class="library-body"><div class="tag">Coming Soon</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><button class="button locked" type="button" data-status-message="Visual archive preparing.">View Status</button></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><button class="button locked" type="button" data-status-message="Visual chapters preparing.">View Status</button></div>
           </article>
 
           <article class="library-card inactive">
@@ -1192,14 +1202,14 @@
             <div class="library-body"><div class="tag">Preparing</div><h3>Music Signals</h3><p>Score fragments, atmosphere, signal loops, and music from the worlds.</p><button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button></div>
           </article>
 
-          <article class="library-card inactive">
+          <article class="library-card">
             <div class="library-art" role="img" aria-label="Full stories incoming"></div>
-            <div class="library-body"><div class="tag">Coming Soon</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><button class="button locked" type="button" data-status-message="Story archive preparing.">View Status</button></div>
+            <div class="library-body"><div class="tag">Active</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read on Medium</a></div>
           </article>
 
-          <article class="library-card inactive">
-            <div class="library-art" role="img" aria-label="World Alive locked"></div>
-            <div class="library-body"><div class="tag">Locked</div><h3>World Alive</h3><p>Social signals, public routes, and community responses from the archive.</p><button class="button locked" type="button" data-status-message="World Alive is locked for now.">Locked</button></div>
+          <article class="library-card">
+            <div class="library-art" role="img" aria-label="World Alive social routes"></div>
+            <div class="library-body"><div class="tag">Active</div><h3>World Alive</h3><p>Social signals, public routes, and community responses from the archive.</p><a class="button" href="#signal">Follow Socials</a></div>
           </article>
         </div>
       </div>
@@ -1210,12 +1220,12 @@
         <aside class="bio-card">
           <img src="profile.jpg" alt="Aaron, creator of Revealed Cosmos Archive" />
           <h3>Aaron</h3>
-          <p>Writer / narrative designer / linguist / solo creative director</p>
+          <p>Professional writer / narrative designer / M.A. in Linguistics / independent creator</p>
           <ul class="bio-list">
             <li>Original story worlds built around memory, identity, hidden systems, and consequence.</li>
             <li>Psychopunk science fiction shaped through pressure, surveillance, flesh-tech, and cities that remember.</li>
             <li>Cinematic fragments, visual archive direction, and narrative clarity.</li>
-            <li>Language, structure, and world logic.</li>
+            <li>Language, structure, world logic, and story packaging.</li>
           </ul>
         </aside>
 
@@ -1223,11 +1233,9 @@
           <div class="kicker">About the Archive</div>
           <h2>YOU ARE ALREADY CLOSE TO PSYCHOPUNK.</h2>
           <p>If you feel the world around you is not as simple as it appears, you are already close to psychopunk.</p>
-          <p>Revealed Cosmos is a public archive of original worlds at the edge of science fiction, dream, memory, and strange reality.</p>
-          <p>Psychopunk is a way of seeing the hidden systems beneath ordinary life: memory, identity, pressure, institutions, and the strange machinery that decides who gets to be seen.</p>
-          <p>In these fragments, cities remember, bodies carry records, and private lives collide with systems that were never meant to be visible.</p>
-          <p>You can enter without preparation - as science fiction, as a journey, as a strange dream, or as a recovered piece of memory.</p>
-          <p>What if the world is arranged differently than it appears?</p>
+          <p>Psychopunk is a way of seeing hidden systems beneath ordinary life: memory, identity, pressure, institutions, and the strange machinery that decides who gets to be seen.</p>
+          <p>In Revealed Cosmos, cities remember, bodies carry records, and private lives collide with systems that were never meant to be visible.</p>
+          <p>You can enter the archive through a video, a story, an image, a signal, or a strange dream that refuses to leave.</p>
           <p class="ending-line">FOLLOW THE SIGNAL.</p>
         </div>
       </div>
@@ -1237,14 +1245,15 @@
       <div class="wrap contact-grid">
         <div>
           <div class="kicker">Leave a Signal</div>
-          <h2>TELL THE ARCHIVE WHAT OPENED.</h2>
+          <h2>SHARE YOUR FEEDBACK.</h2>
           <p class="section-intro">If Luna stayed with you, tell me what you want opened next: the video, the story, the art, the music, the panels, or another world.</p>
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
           <div class="social-routes" aria-label="Social routes">
             <a class="social-link live" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a class="social-link live" href="https://x.com/TMachineMuseum" target="_blank" rel="noopener noreferrer">X</a>
+            <a class="social-link live" href="https://www.instagram.com/therevealedcosmosworld/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="social-link live" href="https://www.tiktok.com/@therevealedcosmoshub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer">TikTok</a>
           </div>
-          <p class="qualifier">Direct email is open now.</p>
         </div>
 
         <div class="contact-panel">
