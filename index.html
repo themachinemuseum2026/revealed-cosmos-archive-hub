@@ -1036,6 +1036,129 @@
       .split, .contact-grid { grid-template-columns: 1fr; }
     }
 
+    @media (max-width: 900px) {
+      .nav {
+        gap: 14px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 6px 8px;
+      }
+
+      nav a,
+      nav button {
+        min-height: 44px;
+      }
+
+      .hero-inner {
+        align-items: start;
+      }
+
+      .video-bay {
+        max-width: 860px;
+      }
+
+      .modal-shell {
+        width: min(100%, 920px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 44px 0;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: clamp(35px, 8vw, 46px);
+        line-height: 1.06;
+      }
+
+      h2,
+      .about-copy h2 {
+        font-size: clamp(28px, 6vw, 38px);
+        line-height: 1.08;
+      }
+
+      .kicker {
+        font-size: 14px;
+        letter-spacing: 1.75px;
+      }
+
+      .lead,
+      .section-intro,
+      .about-copy p {
+        font-size: 17px;
+        line-height: 1.68;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .button {
+        min-height: 52px;
+      }
+
+      .video-screen {
+        min-height: 48vw;
+      }
+
+      .transmission-ui {
+        max-width: min(420px, 92%);
+      }
+
+      .door-card,
+      .library-body,
+      .bio-card,
+      .contact-panel {
+        padding: 24px;
+      }
+
+      .door-card p,
+      .library-card p,
+      .bio-list li {
+        font-size: 16.6px;
+        line-height: 1.66;
+      }
+
+      .card-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .modal {
+        padding: 12px;
+      }
+
+      .modal-close {
+        min-height: 46px;
+        padding: 10px 14px;
+      }
+
+      .modal-body {
+        padding: 18px;
+      }
+
+      .social-routes {
+        gap: 10px;
+      }
+
+      .social-link {
+        min-height: 46px;
+      }
+    }
+
     @media (max-width: 680px) {
       :root { --scroll-offset: 156px; }
       body { font-size: 16px; }
@@ -1043,7 +1166,7 @@
       .wrap, .nav, .hero-inner { width: min(100% - 32px, var(--max)); }
       .logo, .brand-subtitle { white-space: normal; }
       nav { gap: 4px 8px; }
-      nav a, nav button { font-size: 13.2px; letter-spacing: 1.02px; min-height: 40px; padding: 8px 7px; }
+      nav a, nav button { font-size: 13.2px; letter-spacing: 1.02px; min-height: 44px; padding: 8px 7px; }
       .nav-cta { width: 100%; text-align: center; }
       section { padding: 48px 0; }
       .hero { padding-top: 28px; }
@@ -1070,6 +1193,123 @@
       .bio-card img { width: 86px; height: 86px; }
       #backToTop { right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
     }
+
+    @media (max-width: 520px) {
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      .wrap,
+      .nav,
+      .hero-inner {
+        width: min(100% - 28px, var(--max));
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      nav a,
+      nav button {
+        justify-content: center;
+        text-align: center;
+        min-width: 0;
+        width: 100%;
+        padding: 9px 7px;
+      }
+
+      nav .nav-cta {
+        grid-column: 1 / -1;
+      }
+
+      h1 {
+        font-size: clamp(32px, 10vw, 42px);
+      }
+
+      h2,
+      .about-copy h2 {
+        font-size: clamp(26px, 8vw, 34px);
+      }
+
+      .section-intro {
+        margin-bottom: 22px;
+      }
+
+      .buttons,
+      .card-actions,
+      .doors-grid,
+      .library-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-screen {
+        aspect-ratio: 16 / 9;
+        min-height: 250px;
+      }
+
+      .transmission-ui {
+        max-width: 94%;
+      }
+
+      .modal-player {
+        margin-bottom: 16px;
+      }
+
+      .modal-actions .button {
+        width: 100%;
+      }
+
+      .social-link {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 390px) {
+      .wrap,
+      .nav,
+      .hero-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      nav a,
+      nav button {
+        font-size: 12.4px;
+        letter-spacing: .86px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 10.5vw, 38px);
+      }
+
+      .lead,
+      .section-intro,
+      .about-copy p {
+        font-size: 16.5px;
+      }
+
+      .door-card,
+      .library-body,
+      .bio-card,
+      .contact-panel {
+        padding: 22px;
+      }
+
+      .video-screen {
+        min-height: 232px;
+      }
+
+      .transmission-ui strong {
+        font-size: clamp(21px, 7vw, 27px);
+      }
+
+      .transmission-subtitle {
+        font-size: 15px;
+      }
+    }
+
   </style>
 </head>
 <body>
