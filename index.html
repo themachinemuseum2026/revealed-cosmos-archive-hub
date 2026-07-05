@@ -172,8 +172,11 @@
       flex-wrap: wrap;
     }
 
-    nav a {
+    nav a,
+    nav button {
       color: var(--muted);
+      border: 0;
+      background: transparent;
       font-size: 13.2px;
       font-weight: 900;
       letter-spacing: .9px;
@@ -183,7 +186,8 @@
       transition: color .18s ease, text-shadow .18s ease, border-color .18s ease;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav button:hover {
       color: var(--text);
       text-shadow: 0 0 16px rgba(117,213,244,.55);
     }
@@ -249,9 +253,9 @@
 
     .kicker {
       color: var(--gold-strong);
-      font-size: 13.4px;
+      font-size: 14.2px;
       font-weight: 900;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.95px;
       line-height: 1.2;
       margin-bottom: 13px;
       text-transform: uppercase;
@@ -414,6 +418,8 @@
 
     .video-screen {
       position: relative;
+      box-sizing: border-box;
+      width: 100%;
       aspect-ratio: 16 / 9;
       display: grid;
       place-items: end start;
@@ -442,7 +448,7 @@
         linear-gradient(180deg, rgba(2,4,9,.36), rgba(2,4,9,.72)),
         repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 1px, transparent 1px 5px),
         linear-gradient(120deg, transparent 0 42%, rgba(117,213,244,.13) 43%, transparent 44% 100%);
-      opacity: .9;
+      opacity: .72;
       backdrop-filter: blur(2px);
     }
 
@@ -453,7 +459,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: .42;
+      opacity: .58;
       filter: saturate(.9) contrast(1.05);
     }
 
@@ -473,14 +479,15 @@
 
     .transmission-ui {
       position: relative;
+      box-sizing: border-box;
       z-index: 2;
       display: grid;
       gap: 12px;
-      width: min(560px, 100%);
-      padding: clamp(16px, 2vw, 24px);
+      width: min(480px, 100%);
+      padding: clamp(14px, 1.7vw, 20px);
       border: 1px solid rgba(255,255,255,.14);
       background:
-        linear-gradient(135deg, rgba(4,7,13,.92), rgba(4,7,13,.64)),
+        linear-gradient(135deg, rgba(4,7,13,.82), rgba(4,7,13,.52)),
         radial-gradient(circle at 24% 20%, rgba(117,213,244,.14), transparent 34%);
       box-shadow: 0 18px 60px rgba(0,0,0,.5), inset 0 0 26px rgba(0,0,0,.24);
       backdrop-filter: blur(5px);
@@ -584,6 +591,12 @@
       border-color: rgba(216,163,93,.4);
       box-shadow: 0 20px 62px rgba(0,0,0,.36), 0 0 28px rgba(117,213,244,.08);
       transform: translateY(-2px);
+    }
+
+    .door-card.inactive,
+    .library-card.inactive {
+      border-color: rgba(117,213,244,.11);
+      opacity: .82;
     }
 
     .doors-grid {
@@ -1031,7 +1044,7 @@
       .wrap, .nav, .hero-inner { width: min(100% - 32px, var(--max)); }
       .logo, .brand-subtitle { white-space: normal; }
       nav { gap: 4px 8px; }
-      nav a { font-size: 12px; padding: 7px 6px; }
+      nav a, nav button { font-size: 12px; padding: 7px 6px; }
       .nav-cta { width: 100%; text-align: center; }
       section { padding: 48px 0; }
       .hero { padding-top: 28px; }
@@ -1067,11 +1080,10 @@
         <div class="brand-subtitle">Original worlds / films / stories / visual archive</div>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#top">Watch</a>
-        <a href="#doors">Read</a>
-        <a href="#archive">Explore Art</a>
-        <a href="#doors">Music</a>
-        <a href="#about">About</a>
+        <button type="button" data-open-modal="video">Watch</button>
+        <button type="button" data-status-message="Story archive preparing.">Read</button>
+        <button type="button" data-status-message="Soundtrack signal preparing.">Listen / Soundtracks</button>
+        <button type="button" data-status-message="Visual archive preparing.">Explore Art</button>
         <a class="nav-cta" href="#signal">Leave a Signal</a>
       </nav>
     </div>
@@ -1085,7 +1097,7 @@
           <h1>THE SECOND FACE IS OPEN.</h1>
           <p class="lead">The first public fragment from The Price of Flesh is now open through video, story, art, music, and response.</p>
           <p class="lead">Luna Ghani carries a forbidden identity implant called The Second Face - a stolen permission to exist in the shadows of Capital IV.</p>
-          <p class="micro-line">VIDEO FRAGMENT OPEN. THE ARCHIVE FILE IS ACTIVE.</p>
+          <p class="micro-line">VIDEO FRAGMENT OPEN.</p>
           <div class="buttons" aria-label="Hero actions">
             <button class="button" type="button" data-open-modal="video">Watch / Open Player</button>
             <a class="button secondary" href="#doors">Read the Story</a>
@@ -1100,8 +1112,7 @@
               <img class="video-thumb" src="https://img.youtube.com/vi/hurNtlRLzTk/maxresdefault.jpg" alt="" aria-hidden="true" />
               <div class="transmission-ui">
                 <div class="status-row">
-                  <span class="status-chip">VIDEO FRAGMENT OPEN</span>
-                  <span class="status-chip cyan">ARCHIVE FILE ACTIVE</span>
+                  <span class="status-chip">WATCH VIDEO FRAGMENT</span>
                 </div>
                 <strong>LUNA GHANI: THE SECOND FACE</strong>
                 <span class="transmission-subtitle">A stolen face. A city that remembers. A signal that should not exist.</span>
@@ -1126,25 +1137,25 @@
             <button class="button" type="button" data-open-modal="video">Open Player</button>
           </article>
 
-          <article class="door-card">
-            <span class="door-status incoming">Opening Soon</span>
+          <article class="door-card inactive">
+            <span class="door-status incoming">Coming Soon</span>
             <h3>Read the Story</h3>
             <p>The written archive entry expands the world behind Luna Ghani.</p>
-            <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked open soon.">Read Status</button>
+            <button class="button locked" type="button" data-status-message="Story archive preparing.">View Status</button>
           </article>
 
-          <article class="door-card">
-            <span class="door-status active">Active</span>
+          <article class="door-card inactive">
+            <span class="door-status incoming">Preparing</span>
             <h3>Explore Art</h3>
             <p>Character files, world images, objects, and visual fragments from the archive.</p>
-            <a class="button" href="#archive">Explore Art</a>
+            <button class="button locked" type="button" data-status-message="Visual archive preparing.">View Status</button>
           </article>
 
-          <article class="door-card">
-            <span class="door-status incoming">Opening Soon</span>
-            <h3>Hear the Signal</h3>
+          <article class="door-card inactive">
+            <span class="door-status incoming">Preparing</span>
+            <h3>Hear the Signal / Soundtracks</h3>
             <p>Music, atmosphere, and sound fragments from the archive.</p>
-            <button class="button locked" type="button" data-status-message="Music signals are preparing. No public audio link is live yet.">Music Status</button>
+            <button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button>
           </article>
 
           <article class="door-card">
@@ -1172,36 +1183,35 @@
               <p>A forbidden identity implant opens a door the city was never meant to forgive.</p>
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
-                <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked opening soon.">Read</button>
-                <a class="button" href="#archive-categories">Explore Art</a>
-                <button class="button" type="button" data-open-modal="luna">About this story</button>
+                <button class="button locked" type="button" data-status-message="Story archive preparing.">Read</button>
+                <button class="button locked" type="button" data-status-message="Visual archive preparing.">Explore Art</button>
               </div>
             </div>
           </article>
 
-          <article id="archive-categories" class="library-card">
+          <article id="archive-categories" class="library-card inactive">
             <div class="library-art" role="img" aria-label="Visual chapters incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><button class="button locked" type="button" data-status-message="Visual archive preparing.">View Status</button></div>
           </article>
 
-          <article class="library-card">
+          <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="Comic books incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Comic Books</h3><p>Some fragments may return as comic files, carousel chapters, or panel sequences.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Comic Books</h3><p>Some fragments may return as comic files, carousel chapters, or panel sequences.</p><button class="button locked" type="button" data-status-message="Comic files preparing.">View Status</button></div>
           </article>
 
-          <article class="library-card">
+          <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="Music signals incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Music Signals</h3><p>Score fragments, atmosphere, signal loops, and music from the worlds.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Preparing</div><h3>Music Signals</h3><p>Score fragments, atmosphere, signal loops, and music from the worlds.</p><button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button></div>
           </article>
 
-          <article class="library-card">
+          <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="Full stories incoming"></div>
-            <div class="library-body"><div class="tag">Incoming</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><button class="button locked" type="button" data-status-message="Story archive preparing.">View Status</button></div>
           </article>
 
-          <article class="library-card">
+          <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="World Alive locked"></div>
-            <div class="library-body"><div class="tag">Locked</div><h3>World Alive</h3><p>Social fragments, community signals, Instagram-style world moments, and future public doors.</p><a class="button locked" href="#signal">Follow Unlock</a></div>
+            <div class="library-body"><div class="tag">Locked</div><h3>World Alive</h3><p>Social signals, public routes, and community responses from the archive.</p><button class="button locked" type="button" data-status-message="World Alive is locked for now.">Locked</button></div>
           </article>
         </div>
       </div>
@@ -1217,8 +1227,7 @@
             <li>Original story worlds built around memory, identity, hidden systems, and consequence.</li>
             <li>Psychopunk science fiction shaped through pressure, surveillance, flesh-tech, and cities that remember.</li>
             <li>Cinematic fragments, visual archive direction, and narrative clarity.</li>
-            <li>Language, structure, world logic, and story packaging.</li>
-            <li>Authorship, visual direction, and archive curation.</li>
+            <li>Language, structure, and world logic.</li>
           </ul>
         </aside>
 
@@ -1231,7 +1240,7 @@
           <p>In these fragments, cities remember, bodies carry records, and private lives collide with systems that were never meant to be visible.</p>
           <p>You can enter without preparation - as science fiction, as a journey, as a strange dream, or as a recovered piece of memory.</p>
           <p>What if the world is arranged differently than it appears?</p>
-          <p class="ending-line">NEW FRAGMENTS ARE PREPARING TO OPEN.</p>
+          <p class="ending-line">FOLLOW THE SIGNAL.</p>
         </div>
       </div>
     </section>
@@ -1245,8 +1254,6 @@
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
           <div class="social-routes" aria-label="Social routes">
             <a class="social-link live" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <button class="social-link" type="button" disabled>Instagram</button>
-            <button class="social-link" type="button" disabled>TikTok</button>
             <a class="social-link live" href="https://x.com/TMachineMuseum" target="_blank" rel="noopener noreferrer">X</a>
           </div>
           <p class="qualifier">Direct email is open now.</p>
@@ -1261,8 +1268,6 @@
               <label for="entryFrom">Where did you enter from?</label>
               <select id="entryFrom" name="entry_from">
                 <option>YouTube</option>
-                <option>Instagram</option>
-                <option>TikTok</option>
                 <option>X / Threads</option>
                 <option>Medium</option>
                 <option>Direct link</option>
@@ -1271,7 +1276,7 @@
             </div>
             <div><label for="message">What should the archive open next?</label><textarea id="message" name="message" placeholder="Share what you want next, what stayed with you, or any feedback for the archive." required></textarea></div>
             <button id="submitButton" class="button" type="submit">Leave Signal</button>
-            <p id="formStatus" class="form-status" aria-live="polite">Signal draft: this static form opens an email draft to revealedcosmosstudio@gmail.com.</p>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -1479,7 +1484,7 @@
       const message = fieldValue('message');
 
       if (!name || !email || !message) {
-        setFormStatus('Add your name or handle, email, and signal before opening the email draft.', 'error');
+        setFormStatus('Add your name or handle, email, and signal before opening your mail app.', 'error');
         return;
       }
 
@@ -1495,7 +1500,7 @@
         'Page: ' + window.location.href
       ].join('\n');
 
-      setFormStatus('Opening your email draft. Send it from your mail app to leave the signal.', 'success');
+      setFormStatus('Opening your mail app. Send the message to leave the signal.', 'success');
       window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
 
