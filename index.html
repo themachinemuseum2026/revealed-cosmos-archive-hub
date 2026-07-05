@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Revealed Cosmos Archive - Luna Ghani / The Price of Flesh</title>
-  <meta name="description" content="Revealed Cosmos Archive is a dark sci-fi archive for original worlds, films, stories, art, music, and visual archive fragments. Start with Luna Ghani / The Price of Flesh." />
-  <meta name="keywords" content="Revealed Cosmos Archive, Luna Ghani, The Price of Flesh, original worlds, films, stories, visual archive, music, panels" />
-  <meta property="og:title" content="Revealed Cosmos Archive - Luna Ghani / The Price of Flesh" />
-  <meta property="og:description" content="A cinematic sci-fi archive for original worlds, films, stories, art, music, and visual archive fragments. Start with Luna Ghani / The Price of Flesh." />
+  <title>Revealed Cosmos Archive - Luna Ghani: The Second Face</title>
+  <meta name="description" content="Revealed Cosmos Archive is a dark sci-fi archive for original worlds, films, stories, art, music, and visual archive fragments. Start with Luna Ghani: The Second Face." />
+  <meta name="keywords" content="Revealed Cosmos Archive, Luna Ghani, The Second Face, The Price of Flesh, original worlds, films, stories, visual archive, music, panels" />
+  <meta property="og:title" content="Revealed Cosmos Archive - Luna Ghani: The Second Face" />
+  <meta property="og:description" content="The first public fragment from The Price of Flesh is open: Luna Ghani carries a forbidden identity implant called The Second Face." />
   <meta property="og:image" content="hero_brand.jpg" />
   <meta property="og:type" content="website" />
   <style>
@@ -446,6 +446,17 @@
       backdrop-filter: blur(2px);
     }
 
+    .video-thumb {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .42;
+      filter: saturate(.9) contrast(1.05);
+    }
+
     .video-screen::after {
       content: "";
       position: absolute;
@@ -531,7 +542,7 @@
       text-shadow: 0 0 30px rgba(0,0,0,.8);
     }
 
-    .transmission-ui span:last-child {
+    .transmission-subtitle {
       color: #ded6c9;
       max-width: 36rem;
       font-size: 17px;
@@ -652,15 +663,6 @@
         radial-gradient(circle at 50% 52%, rgba(244,201,130,.22), transparent 9%),
         linear-gradient(135deg, rgba(117,213,244,.12), transparent 34%),
         linear-gradient(180deg, #0b1724, #02060d);
-    }
-
-    .library-art.hero-art {
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.62)),
-        radial-gradient(circle at 52% 46%, rgba(216,163,93,.24), transparent 36%),
-        url('keyframe_city_spy.jpg');
-      background-size: cover;
-      background-position: center 42%;
     }
 
     .library-card.active .library-art {
@@ -842,6 +844,9 @@
     }
 
     .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       min-height: 38px;
       border: 1px solid rgba(117,213,244,.22);
       background: rgba(117,213,244,.045);
@@ -854,6 +859,14 @@
       text-transform: uppercase;
       cursor: not-allowed;
       opacity: .76;
+    }
+
+    .social-link.live {
+      border-color: rgba(216,163,93,.52);
+      background: rgba(216,163,93,.085);
+      color: var(--text);
+      cursor: pointer;
+      opacity: 1;
     }
 
     .modal {
@@ -928,6 +941,10 @@
       border: 0;
       display: block;
       background: #000;
+    }
+
+    .modal-actions {
+      margin-top: 16px;
     }
 
     .modal-copy {
@@ -1065,10 +1082,10 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <div class="kicker">Luna Ghani / The Price of Flesh</div>
-          <h1>A BODY. A CITY.<br />A SYSTEM THAT REMEMBERS.</h1>
-          <p class="lead">The first public fragment from The Price of Flesh opens through video, story, art, music, and response.</p>
-          <p class="lead">Luna Ghani stands at the threshold of a world where the body is no longer private - it is record, currency, memory, and claim.</p>
-          <p class="micro-line">Video release pending. The archive file is open.</p>
+          <h1>THE SECOND FACE IS OPEN.</h1>
+          <p class="lead">The first public fragment from The Price of Flesh is now open through video, story, art, music, and response.</p>
+          <p class="lead">Luna Ghani carries a forbidden identity implant called The Second Face - a stolen permission to exist in the shadows of Capital IV.</p>
+          <p class="micro-line">VIDEO FRAGMENT OPEN. THE ARCHIVE FILE IS ACTIVE.</p>
           <div class="buttons" aria-label="Hero actions">
             <button class="button" type="button" data-open-modal="video">Watch / Open Player</button>
             <a class="button secondary" href="#doors">Read the Story</a>
@@ -1077,16 +1094,17 @@
           </div>
         </div>
 
-        <aside class="video-bay" aria-label="Video release pending for Luna Ghani / The Price of Flesh">
+        <aside class="video-bay" aria-label="Video fragment open for Luna Ghani: The Second Face">
           <button class="video-trigger" type="button" data-open-modal="video" aria-label="Open video player modal">
             <div class="video-screen">
+              <img class="video-thumb" src="https://img.youtube.com/vi/hurNtlRLzTk/maxresdefault.jpg" alt="" aria-hidden="true" />
               <div class="transmission-ui">
                 <div class="status-row">
-                  <span class="status-chip">Video Release Pending</span>
-                  <span class="status-chip cyan">Archive File Open</span>
+                  <span class="status-chip">VIDEO FRAGMENT OPEN</span>
+                  <span class="status-chip cyan">ARCHIVE FILE ACTIVE</span>
                 </div>
-                <strong>Luna Ghani / The Price of Flesh</strong>
-                <span>The first signal is being prepared.</span>
+                <strong>LUNA GHANI: THE SECOND FACE</strong>
+                <span class="transmission-subtitle">A stolen face. A city that remembers. A signal that should not exist.</span>
               </div>
             </div>
           </button>
@@ -1104,7 +1122,7 @@
           <article class="door-card">
             <span class="door-status active">Active</span>
             <h3>Watch the Fragment</h3>
-            <p>The cinematic release opens here when the video goes live.</p>
+            <p>The cinematic release is open here now.</p>
             <button class="button" type="button" data-open-modal="video">Open Player</button>
           </article>
 
@@ -1147,11 +1165,11 @@
 
         <div class="library-grid" aria-label="Archive library">
           <article class="library-card active">
-            <div class="library-art hero-art" role="img" aria-label="Luna Ghani archive file"></div>
+            <div class="library-art" role="img" aria-label="Luna Ghani archive file"></div>
             <div class="library-body">
-              <div class="tag">Now Opening</div>
-              <h3>Luna Ghani / The Price of Flesh</h3>
-              <p>A body, a city, and a system that learned to own both.</p>
+              <div class="tag">Now Open</div>
+              <h3>Luna Ghani: The Second Face</h3>
+              <p>A forbidden identity implant opens a door the city was never meant to forgive.</p>
               <div class="card-actions" aria-label="Luna file actions">
                 <button class="button" type="button" data-open-modal="video">Watch</button>
                 <button class="button locked" type="button" data-status-message="The written story is not linked yet. This door is marked opening soon.">Read</button>
@@ -1196,25 +1214,23 @@
           <h3>Aaron</h3>
           <p>Writer / narrative designer / linguist / solo creative director</p>
           <ul class="bio-list">
-            <li>Original story worlds</li>
-            <li>Psychopunk, memory, identity, and hidden systems</li>
-            <li>Cinematic fragments and visual archive direction</li>
-            <li>Language, structure, and narrative clarity</li>
-            <li>Human-led visual direction</li>
+            <li>Original story worlds built around memory, identity, hidden systems, and consequence.</li>
+            <li>Psychopunk science fiction shaped through pressure, surveillance, flesh-tech, and cities that remember.</li>
+            <li>Cinematic fragments, visual archive direction, and narrative clarity.</li>
+            <li>Language, structure, world logic, and story packaging.</li>
+            <li>Authorship, visual direction, and archive curation.</li>
           </ul>
         </aside>
 
         <div class="about-copy">
           <div class="kicker">About the Archive</div>
           <h2>YOU ARE ALREADY CLOSE TO PSYCHOPUNK.</h2>
-          <p>If the world around you has ever felt less simple than it appears, you are already close to psychopunk.</p>
+          <p>If you feel the world around you is not as simple as it appears, you are already close to psychopunk.</p>
           <p>Revealed Cosmos is a public archive of original worlds at the edge of science fiction, dream, memory, and strange reality.</p>
-          <p>Psychopunk is fiction about inner experience, hidden systems, intersecting realities, and the feeling that ordinary life is only the visible layer of something larger.</p>
-          <p>I have been writing these stories for more than ten years. The first fragment came from a dream and was written down in a notebook. From there, the world began to grow: ordinary life breaking open, hidden systems showing through, and characters caught between what they remember and what the world allows them to know.</p>
+          <p>Psychopunk is a way of seeing the hidden systems beneath ordinary life: memory, identity, pressure, institutions, and the strange machinery that decides who gets to be seen.</p>
+          <p>In these fragments, cities remember, bodies carry records, and private lives collide with systems that were never meant to be visible.</p>
           <p>You can enter without preparation - as science fiction, as a journey, as a strange dream, or as a recovered piece of memory.</p>
-          <p>The question behind the archive is simple:</p>
           <p>What if the world is arranged differently than it appears?</p>
-          <p>I write the fragments, design the world logic, shape the visual tone, curate the final images, and decide how each release enters the archive.</p>
           <p class="ending-line">NEW FRAGMENTS ARE PREPARING TO OPEN.</p>
         </div>
       </div>
@@ -1227,14 +1243,13 @@
           <h2>TELL THE ARCHIVE WHAT OPENED.</h2>
           <p class="section-intro">If Luna stayed with you, tell me what you want opened next: the video, the story, the art, the music, the panels, or another world.</p>
           <p class="direct-email-note"><span>Direct email:</span><a href="mailto:revealedcosmosstudio@gmail.com">revealedcosmosstudio@gmail.com</a></p>
-          <div class="social-routes" aria-label="Social routes preparing">
-            <button class="social-link" type="button" disabled>YouTube</button>
+          <div class="social-routes" aria-label="Social routes">
+            <a class="social-link live" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">YouTube</a>
             <button class="social-link" type="button" disabled>Instagram</button>
             <button class="social-link" type="button" disabled>TikTok</button>
-            <button class="social-link" type="button" disabled>X / Threads</button>
-            <button class="social-link" type="button" disabled>Link Hub</button>
+            <a class="social-link live" href="https://x.com/TMachineMuseum" target="_blank" rel="noopener noreferrer">X</a>
           </div>
-          <p class="qualifier">Social routes are preparing. Direct email is open now.</p>
+          <p class="qualifier">Direct email is open now.</p>
         </div>
 
         <div class="contact-panel">
@@ -1283,7 +1298,8 @@
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
     const CONTACT_EMAIL = 'revealedcosmosstudio@gmail.com';
-    const FUTURE_YOUTUBE_EMBED_URL = '';
+    const YOUTUBE_EMBED_URL = 'https://www.youtube.com/embed/hurNtlRLzTk';
+    const YOUTUBE_WATCH_URL = 'https://www.youtube.com/watch?v=hurNtlRLzTk';
 
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modalTitle');
@@ -1335,31 +1351,17 @@
       });
     });
 
-    function pendingPlayerMarkup() {
-      return [
-        '<div class="modal-player">',
-        '<div class="video-screen">',
-        '<div class="transmission-ui">',
-        '<div class="status-row"><span class="status-chip">Video Release Pending</span><span class="status-chip cyan">Archive File Open</span></div>',
-        '<strong>Luna Ghani / The Price of Flesh</strong>',
-        '<span>The first signal is being prepared.</span>',
-        '</div>',
-        '</div>',
-        '</div>',
-        '<p class="modal-copy">The player is preparing. When the YouTube embed URL is added, this modal can show the live video here without changing the page structure.</p>'
-      ].join('');
-    }
-
     function videoMarkup() {
-      if (FUTURE_YOUTUBE_EMBED_URL) {
-        return '<div class="modal-player"><iframe src="' + FUTURE_YOUTUBE_EMBED_URL + '" title="Luna Ghani / The Price of Flesh video player" allowfullscreen></iframe></div>';
-      }
-      return pendingPlayerMarkup();
+      return [
+        '<div class="modal-player"><iframe src="' + YOUTUBE_EMBED_URL + '" title="Luna Ghani: The Second Face video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>',
+        '<div class="modal-actions"><a class="button" href="' + YOUTUBE_WATCH_URL + '" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div>'
+      ].join('');
     }
 
     function lunaMarkup() {
       return [
-        '<p class="modal-copy">The first public fragment from The Price of Flesh. Luna Ghani stands at the threshold of a world where the body is no longer private - it is record, currency, memory, and claim.</p>',
+        '<p class="modal-copy">The Second Face was not a disguise. It was a stolen permission to exist in the shadows of a megacity.</p>',
+        '<p class="modal-copy">Luna Ghani carries a forbidden identity implant called The Second Face. It changes her face, her signal, and the way Capital IV recognizes her. She believes it can hide her, but the city begins hunting the thing inside her.</p>',
         '<p class="modal-copy">This is not the whole story. It is the first door.</p>',
         '<div class="buttons">',
         '<button class="button" type="button" data-open-modal="video">Open Player</button>',
@@ -1372,7 +1374,7 @@
       if (!modal || !modalTitle || !modalBody) return;
       lastFocusedElement = document.activeElement;
       if (type === 'luna') {
-        modalTitle.textContent = 'Luna Ghani / The Price of Flesh';
+        modalTitle.textContent = 'Luna Ghani: The Second Face';
         modalBody.innerHTML = lunaMarkup();
       } else {
         modalTitle.textContent = 'Archive Player';
