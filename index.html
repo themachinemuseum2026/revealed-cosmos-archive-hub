@@ -174,14 +174,15 @@
 
     nav a,
     nav button {
-      color: var(--muted);
+      color: #d9e4e8;
       border: 0;
       background: transparent;
-      font-size: 13.2px;
+      font-size: 13.6px;
       font-weight: 900;
-      letter-spacing: .9px;
-      line-height: 1.1;
-      padding: 8px 9px;
+      letter-spacing: 1px;
+      line-height: 1.12;
+      min-height: 40px;
+      padding: 10px 10px;
       text-transform: uppercase;
       transition: color .18s ease, text-shadow .18s ease, border-color .18s ease;
     }
@@ -244,7 +245,7 @@
       width: min(var(--max), calc(100% - clamp(32px, 4vw, 56px)));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, .42fr) minmax(500px, .58fr);
+      grid-template-columns: minmax(0, .4fr) minmax(540px, .6fr);
       gap: clamp(26px, 3.2vw, 44px);
       align-items: center;
     }
@@ -253,9 +254,9 @@
 
     .kicker {
       color: var(--gold-strong);
-      font-size: 14.2px;
+      font-size: 14.6px;
       font-weight: 900;
-      letter-spacing: 1.95px;
+      letter-spacing: 2px;
       line-height: 1.2;
       margin-bottom: 13px;
       text-transform: uppercase;
@@ -269,14 +270,14 @@
     }
 
     h1 {
-      font-size: clamp(34px, 3.9vw, 52px);
+      font-size: clamp(33px, 3.55vw, 49px);
       margin-bottom: 18px;
       text-transform: uppercase;
     }
 
     h2 {
       max-width: 860px;
-      font-size: clamp(30px, 3vw, 44px);
+      font-size: clamp(29px, 2.8vw, 42px);
       margin-bottom: 16px;
     }
 
@@ -293,8 +294,8 @@
     .section-intro,
     .about-copy p {
       color: #e0d8cb;
-      font-size: clamp(17.4px, .34vw + 16.2px, 19.4px);
-      line-height: 1.66;
+      font-size: clamp(17.8px, .34vw + 16.4px, 19.6px);
+      line-height: 1.68;
     }
 
     .lead { max-width: 560px; }
@@ -318,7 +319,7 @@
 
     .button {
       position: relative;
-      min-height: 48px;
+      min-height: 52px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -328,11 +329,11 @@
         linear-gradient(180deg, rgba(244,201,130,.27), rgba(216,163,93,.11)),
         linear-gradient(90deg, rgba(216,163,93,.08), rgba(117,213,244,.06));
       color: var(--text);
-      font-size: 13.6px;
+      font-size: 14px;
       font-weight: 900;
-      letter-spacing: .8px;
+      letter-spacing: .9px;
       line-height: 1.2;
-      padding: 14px 18px;
+      padding: 15px 20px;
       text-align: center;
       text-transform: uppercase;
       box-shadow: inset 0 0 20px rgba(216,163,93,.12), 0 10px 34px rgba(0,0,0,.22);
@@ -448,7 +449,7 @@
         linear-gradient(180deg, rgba(2,4,9,.36), rgba(2,4,9,.72)),
         repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 1px, transparent 1px 5px),
         linear-gradient(120deg, transparent 0 42%, rgba(117,213,244,.13) 43%, transparent 44% 100%);
-      opacity: .72;
+      opacity: .58;
       backdrop-filter: blur(2px);
     }
 
@@ -459,8 +460,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: .58;
-      filter: saturate(.9) contrast(1.05);
+      opacity: .72;
+      filter: saturate(1.05) contrast(1.08) brightness(1.08);
     }
 
     .video-screen::after {
@@ -482,12 +483,12 @@
       box-sizing: border-box;
       z-index: 2;
       display: grid;
-      gap: 12px;
-      width: min(480px, 100%);
-      padding: clamp(14px, 1.7vw, 20px);
+      gap: 10px;
+      width: min(420px, 100%);
+      padding: clamp(12px, 1.35vw, 17px);
       border: 1px solid rgba(255,255,255,.14);
       background:
-        linear-gradient(135deg, rgba(4,7,13,.82), rgba(4,7,13,.52)),
+        linear-gradient(135deg, rgba(4,7,13,.72), rgba(4,7,13,.42)),
         radial-gradient(circle at 24% 20%, rgba(117,213,244,.14), transparent 34%);
       box-shadow: 0 18px 60px rgba(0,0,0,.5), inset 0 0 26px rgba(0,0,0,.24);
       backdrop-filter: blur(5px);
@@ -542,7 +543,7 @@
     .transmission-ui strong {
       color: #fff8ed;
       font-family: var(--heading);
-      font-size: clamp(28px, 3vw, 44px);
+      font-size: clamp(24px, 2.35vw, 36px);
       line-height: 1.03;
       letter-spacing: .8px;
       text-transform: uppercase;
@@ -552,7 +553,7 @@
     .transmission-subtitle {
       color: #ded6c9;
       max-width: 36rem;
-      font-size: 17px;
+      font-size: 15.8px;
     }
 
     .panel,
@@ -619,8 +620,8 @@
     .door-card p,
     .library-card p {
       color: #dcd4c8;
-      font-size: 16.8px;
-      line-height: 1.68;
+      font-size: 17px;
+      line-height: 1.7;
       margin-bottom: 0;
     }
 
@@ -637,8 +638,8 @@
     .door-card .button {
       width: 100%;
       margin-top: 4px;
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     .library-grid {
@@ -726,9 +727,9 @@
     }
 
     .card-actions .button {
-      min-height: 42px;
-      padding: 10px 12px;
-      font-size: 12.5px;
+      min-height: 46px;
+      padding: 12px 15px;
+      font-size: 13px;
     }
 
     .split,
@@ -817,11 +818,11 @@
     select,
     textarea {
       width: 100%;
-      min-height: 50px;
+      min-height: 52px;
       border: 1px solid rgba(255,255,255,.17);
       background: rgba(2,4,9,.82);
       color: var(--text);
-      padding: 14px 15px;
+      padding: 15px 16px;
       outline: 0;
     }
 
@@ -858,13 +859,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 38px;
+      min-height: 44px;
       border: 1px solid rgba(117,213,244,.22);
       background: rgba(117,213,244,.045);
       color: #a9c8d1;
-      padding: 9px 11px;
+      padding: 11px 14px;
       font-family: var(--heading);
-      font-size: 12px;
+      font-size: 12.8px;
       font-weight: 900;
       letter-spacing: .8px;
       text-transform: uppercase;
@@ -1042,15 +1043,15 @@
       .wrap, .nav, .hero-inner { width: min(100% - 32px, var(--max)); }
       .logo, .brand-subtitle { white-space: normal; }
       nav { gap: 4px 8px; }
-      nav a, nav button { font-size: 12px; padding: 7px 6px; }
+      nav a, nav button { font-size: 12.4px; min-height: 40px; padding: 8px 7px; }
       .nav-cta { width: 100%; text-align: center; }
       section { padding: 48px 0; }
       .hero { padding-top: 28px; }
       h1 { font-size: clamp(30px, 9.2vw, 40px); line-height: 1.05; }
       h2 { font-size: clamp(27px, 7.5vw, 36px); }
-      .lead, .section-intro, .about-copy p { font-size: 16.4px; }
+      .lead, .section-intro, .about-copy p { font-size: 16.8px; line-height: 1.66; }
       .buttons { flex-direction: column; align-items: stretch; }
-      .button { width: 100%; }
+      .button { width: 100%; min-height: 52px; }
       .doors-grid, .library-grid { grid-template-columns: 1fr; }
       .library-card, .library-card:nth-last-child(2), .library-card:last-child { grid-column: span 1; }
       .library-card.active { grid-column: span 1; grid-template-rows: 220px minmax(0, 1fr); }
@@ -1058,13 +1059,14 @@
       .door-card { min-height: 0; }
       .video-bay { padding: 10px; }
       .video-screen { padding: 16px; min-height: 62vw; }
-      .transmission-ui strong { font-size: clamp(24px, 8vw, 33px); }
-      .transmission-ui { padding: 15px; }
+      .transmission-ui strong { font-size: clamp(22px, 7.2vw, 30px); }
+      .transmission-ui { padding: 13px; }
       .modal { padding: 10px; }
       .modal-shell { max-height: 94svh; }
       .modal-head { align-items: flex-start; }
       .modal-close { flex: 0 0 auto; }
       .card-actions { flex-direction: column; }
+      .social-link { min-height: 46px; padding: 12px 14px; }
       .bio-card img { width: 86px; height: 86px; }
       #backToTop { right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
     }
@@ -1095,12 +1097,12 @@
           <h1>THE SECOND FACE IS OPEN.</h1>
           <p class="lead">The first public fragment from The Price of Flesh is now open through video, story, art, music, and response.</p>
           <p class="lead">Luna Ghani carries a forbidden identity implant called The Second Face - a stolen permission to exist in the shadows of Capital IV.</p>
-          <p class="micro-line">VIDEO FRAGMENT OPEN.</p>
+          <p class="micro-line">THE FRAGMENT IS OPEN.</p>
           <div class="buttons" aria-label="Hero actions">
-            <button class="button" type="button" data-open-modal="video">Watch / Open Player</button>
-            <a class="button secondary" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read the Story</a>
+            <button class="button" type="button" data-open-modal="video">Watch</button>
+            <a class="button secondary" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a>
             <a class="button secondary" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore Art</a>
-            <a class="button secondary" href="#signal">Leave a Signal</a>
+            <a class="button secondary" href="#signal">Leave Signal</a>
           </div>
         </div>
 
@@ -1110,7 +1112,7 @@
               <img class="video-thumb" src="https://img.youtube.com/vi/hurNtlRLzTk/maxresdefault.jpg" alt="" aria-hidden="true" />
               <div class="transmission-ui">
                 <div class="status-row">
-                  <span class="status-chip">WATCH VIDEO FRAGMENT</span>
+                  <span class="status-chip">WATCH THE FRAGMENT</span>
                 </div>
                 <strong>LUNA GHANI: THE SECOND FACE</strong>
                 <span class="transmission-subtitle">A stolen face. A city that remembers. A signal that should not exist.</span>
@@ -1125,21 +1127,21 @@
       <div class="wrap">
         <div class="kicker">Archive Doors</div>
         <h2>CHOOSE YOUR DOOR.</h2>
-        <p class="section-intro">Watch, read, explore, listen, or follow. Each route opens the archive from a different angle.</p>
+        <p class="section-intro">Begin with the open fragment. Read the archive, follow the signal, or leave a response for what should open next.</p>
 
         <div class="doors-grid" aria-label="Archive routes">
           <article class="door-card">
             <span class="door-status active">Active</span>
             <h3>Watch the Fragment</h3>
             <p>The cinematic release is open here now.</p>
-            <button class="button" type="button" data-open-modal="video">Open Player</button>
+            <button class="button" type="button" data-open-modal="video">Watch</button>
           </article>
 
           <article class="door-card">
             <span class="door-status active">Active</span>
             <h3>Read Stories</h3>
             <p>Written archive entries and story fragments expand the world behind Luna Ghani.</p>
-            <a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read on Medium</a>
+            <a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a>
           </article>
 
           <article class="door-card">
@@ -1153,14 +1155,14 @@
             <span class="door-status incoming">Preparing</span>
             <h3 class="compact-title">Hear the Signal / Soundtracks</h3>
             <p>Music, atmosphere, and sound fragments from the archive.</p>
-            <button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button>
+            <button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">Status</button>
           </article>
 
           <article class="door-card">
             <span class="door-status active">Active</span>
             <h3>Follow on Socials</h3>
             <p>Follow the public routes and leave a signal for what should open next.</p>
-            <a class="button" href="#signal">Leave Signal</a>
+            <a class="button" href="#signal">Follow</a>
           </article>
         </div>
       </div>
@@ -1189,27 +1191,27 @@
 
           <article id="archive-categories" class="library-card inactive">
             <div class="library-art" role="img" aria-label="Visual chapters incoming"></div>
-            <div class="library-body"><div class="tag">Coming Soon</div><h3>Visual Chapters</h3><p>Visual novel-style sequences, panels, and cinematic image chapters from the archive.</p><button class="button locked" type="button" data-status-message="Visual chapters preparing.">View Status</button></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Visual Chapters</h3><p>Cinematic image sequences, visual-novel style panels, and scene fragments from the archive.</p><button class="button locked" type="button" data-status-message="Visual chapters preparing.">Status</button></div>
           </article>
 
           <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="Comic books incoming"></div>
-            <div class="library-body"><div class="tag">Coming Soon</div><h3>Comic Books</h3><p>Some fragments may return as comic files, carousel chapters, or panel sequences.</p><button class="button locked" type="button" data-status-message="Comic files preparing.">View Status</button></div>
+            <div class="library-body"><div class="tag">Coming Soon</div><h3>Comic Books</h3><p>Panel sequences and comic-style fragments may open as the archive expands.</p><button class="button locked" type="button" data-status-message="Comic files preparing.">Status</button></div>
           </article>
 
           <article class="library-card inactive">
             <div class="library-art" role="img" aria-label="Music signals incoming"></div>
-            <div class="library-body"><div class="tag">Preparing</div><h3>Music Signals</h3><p>Score fragments, atmosphere, signal loops, and music from the worlds.</p><button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">View Status</button></div>
+            <div class="library-body"><div class="tag">Preparing</div><h3>Music Signals</h3><p>Soundtrack fragments, atmosphere loops, and signal music from the worlds.</p><button class="button locked" type="button" data-status-message="Soundtrack signal preparing.">Status</button></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="Full stories incoming"></div>
-            <div class="library-body"><div class="tag">Active</div><h3>Full Stories</h3><p>Written archive entries, short stories, and deeper fragments from the larger worlds.</p><a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read on Medium</a></div>
+            <div class="library-body"><div class="tag">Active</div><h3>Full Stories</h3><p>Written archive entries and deeper story fragments from the larger worlds.</p><a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a></div>
           </article>
 
           <article class="library-card">
             <div class="library-art" role="img" aria-label="World Alive social routes"></div>
-            <div class="library-body"><div class="tag">Active</div><h3>World Alive</h3><p>Social signals, public routes, and community responses from the archive.</p><a class="button" href="#signal">Follow Socials</a></div>
+            <div class="library-body"><div class="tag">Active</div><h3>World Alive</h3><p>Social routes, public signals, and community responses from the archive.</p><a class="button" href="#signal">Follow</a></div>
           </article>
         </div>
       </div>
@@ -1271,7 +1273,7 @@
                 <option>Other</option>
               </select>
             </div>
-            <div><label for="message">What should the archive open next?</label><textarea id="message" name="message" placeholder="Share what you want next, what stayed with you, or any feedback for the archive." required></textarea></div>
+            <div><label for="message">What would you like to tell the archive?</label><textarea id="message" name="message" placeholder="Share any feedback, reaction, question, or idea you want to send back to the archive." required></textarea></div>
             <button id="submitButton" class="button" type="submit">Leave Signal</button>
             <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
@@ -1366,7 +1368,7 @@
         '<p class="modal-copy">Luna Ghani carries a forbidden identity implant called The Second Face. It changes her face, her signal, and the way Capital IV recognizes her. She believes it can hide her, but the city begins hunting the thing inside her.</p>',
         '<p class="modal-copy">This is not the whole story. It is the first door.</p>',
         '<div class="buttons">',
-        '<button class="button" type="button" data-open-modal="video">Open Player</button>',
+        '<button class="button" type="button" data-open-modal="video">Watch</button>',
         '<a class="button" href="#signal">Leave Signal</a>',
         '</div>'
       ].join('');
