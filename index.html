@@ -670,8 +670,8 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: 46% center;
+      object-fit: contain;
+      object-position: center;
       filter: saturate(.94) contrast(1.04);
       transition: transform .65s var(--ease), filter .3s ease;
     }
@@ -769,6 +769,40 @@
     .format-card:focus-visible .text-link {
       color: var(--cyan);
       border-color: var(--cyan);
+    }
+
+    .format-card-disabled {
+      cursor: default;
+      background: #0d1116;
+      opacity: .62;
+    }
+
+    .format-card-disabled:hover {
+      transform: none;
+      border-color: var(--line);
+      background: #0d1116;
+    }
+
+    .format-card-disabled .text-link {
+      color: var(--muted);
+      border-color: rgba(133,139,144,.34);
+    }
+
+    .format-card-disabled:hover .text-link { color: var(--muted); border-color: rgba(133,139,144,.34); }
+
+    .coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .coming-soon::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ef645f;
+      box-shadow: 0 0 9px rgba(239,100,95,.64);
     }
 
     .about {
@@ -1008,17 +1042,17 @@
           <p class="hero-lead">The archive opens through stories, cinematic fragments, visual art and sound. Its civilizations are built around impossible rules, and survival always has a price.</p>
           <div class="button-row hero-actions choice-buttons" aria-label="Explore The Revealed Cosmos">
             <a class="button button-primary" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read</a>
-            <a class="button" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">Watch</a>
+            <a class="button" href="https://www.youtube.com/watch?v=2Gx-sb4BKgk" target="_blank" rel="noopener noreferrer">Watch</a>
             <a class="button" href="#stories">Explore the Cosmos</a>
           </div>
         </div>
 
-        <a class="entry-card" href="#latest" aria-label="Open Luna Ghani: The Second Face">
+        <a class="entry-card" href="#latest" aria-label="Open Luna Ghani Part II: What the Cameras Cannot See">
           <span class="entry-meta">
             <span class="entry-available">Available now</span>
           </span>
-          <strong>Luna Ghani: The Second Face</strong>
-          <p>Luna carries a forbidden second identity beneath her own. Activating it will place the fate of every inhabitant in the megacity in her hands.</p>
+          <strong>Luna Ghani Part II: What the Cameras Cannot See</strong>
+          <p>A courier job leads Luna to a hidden android. The face that keeps her invisible may also be the signal that gives her away.</p>
           <span class="entry-action">Start here</span>
         </a>
       </div>
@@ -1027,7 +1061,7 @@
     <section class="section-pad" id="latest">
       <div class="shell">
         <div class="release-intro reveal">
-          <h2>The city controls every life. Luna carries the one identity that could break its hold.</h2>
+          <h2>Every camera in the megacity records a face. Luna is wearing one they cannot see.</h2>
         </div>
 
         <article class="release reveal">
@@ -1035,16 +1069,16 @@
             <div class="release-meta">
               <span class="chip chip-live">Available now</span>
             </div>
-            <h3>Luna Ghani: The Second Face</h3>
-            <p class="release-hook">She wears a forbidden identity implant in a city built to control every life. Activating the second face will not merely hide Luna. To reclaim her own identity, she will have to destabilize the system governing every other identity in the megacity.</p>
+            <h3>Luna Ghani Part II: What the Cameras Cannot See</h3>
+            <p class="release-hook">Luna arrives in a city where every identity is tracked. A routine courier job leads her to a hidden android, a data shard and a future already closing in. Her forbidden implant can change the face the cameras see, but not what is hunting beneath it.</p>
             <div class="button-row choice-buttons">
-              <a class="button button-primary" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">Watch the short films</a>
+              <a class="button button-primary" href="https://www.youtube.com/watch?v=2Gx-sb4BKgk" target="_blank" rel="noopener noreferrer">Watch the new film</a>
               <a class="button" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read the story</a>
               <a class="button" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore the visuals</a>
             </div>
           </div>
-          <a class="release-visual" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer" aria-label="Watch Luna Ghani: The Second Face">
-            <img src="static/assets/luna-second-identity-thumbnail-v4.jpg" alt="Luna Ghani and her hostile second identity emerging with red eyes above the rain-darkened megacity" width="1672" height="941" loading="lazy" decoding="async">
+          <a class="release-visual" href="https://www.youtube.com/watch?v=2Gx-sb4BKgk" target="_blank" rel="noopener noreferrer" aria-label="Watch Luna Ghani Part II: What the Cameras Cannot See">
+            <img src="static/assets/luna-ghani-part-ii-thumbnail.jpg" alt="Close view of Luna Ghani with a clouded augmented eye and the title The Second Face" width="1280" height="720" loading="lazy" decoding="async">
           </a>
         </article>
       </div>
@@ -1065,7 +1099,7 @@
             <p>Read the stories where each world reveals its rules, conflicts and cost.</p>
             <span class="text-link">Explore the stories</span>
           </a>
-          <a class="format-card reveal" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">
+          <a class="format-card reveal" href="https://www.youtube.com/watch?v=2Gx-sb4BKgk" target="_blank" rel="noopener noreferrer">
             <small>Watch</small>
             <h3>Watch the Cosmos in motion</h3>
             <p>See pivotal moments translated into cinematic fragments shaped by image, atmosphere and sound.</p>
@@ -1077,12 +1111,12 @@
             <p>Explore the characters, places, artifacts and visual records behind the stories.</p>
             <span class="text-link">Explore the art</span>
           </a>
-          <a class="format-card reveal" href="#follow">
+          <article class="format-card format-card-disabled reveal" aria-disabled="true">
             <small>Listen</small>
             <h3>Hear the worlds come alive</h3>
             <p>Listen to the original songs and soundscapes that carry each world beyond the page.</p>
-            <span class="text-link">Listen to the soundscapes</span>
-          </a>
+            <span class="text-link coming-soon">Coming soon</span>
+          </article>
         </div>
       </div>
     </section>
@@ -1100,15 +1134,15 @@
           <p>New stories, films, images and music appear across the archive's channels. Choose one and continue from there.</p>
           <div class="closing-actions choice-buttons">
             <a class="button button-primary" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer">Read stories</a>
-            <a class="button" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer">Watch short films</a>
+            <a class="button" href="https://www.youtube.com/@TheRevealedCosmos" target="_blank" rel="noopener noreferrer">Watch short films</a>
             <a class="button" href="https://www.deviantart.com/themachinemuseum" target="_blank" rel="noopener noreferrer">Explore art</a>
           </div>
 
           <nav class="social-grid" aria-label="Revealed Cosmos channels">
             <a class="social-link" href="https://therevealedcosmos.medium.com/" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/medium.svg" alt="" aria-hidden="true"><span>Medium</span></a>
-            <a class="social-link" href="https://www.youtube.com/watch?v=hurNtlRLzTk" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/youtube.svg" alt="" aria-hidden="true"><span>YouTube</span></a>
-            <a class="social-link" href="https://www.instagram.com/therevealedcosmosworld/" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/instagram.svg" alt="" aria-hidden="true"><span>Instagram</span></a>
-            <a class="social-link" href="https://www.tiktok.com/@therevealedcosmoshub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/tiktok.svg" alt="" aria-hidden="true"><span>TikTok</span></a>
+            <a class="social-link" href="https://www.youtube.com/@TheRevealedCosmos" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/youtube.svg" alt="" aria-hidden="true"><span>YouTube</span></a>
+            <a class="social-link" href="https://www.instagram.com/therevealedcosmosworlds" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/instagram.svg" alt="" aria-hidden="true"><span>Instagram</span></a>
+            <a class="social-link" href="https://www.tiktok.com/@therevealedcosmoworlds" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/tiktok.svg" alt="" aria-hidden="true"><span>TikTok</span></a>
             <a class="social-link" href="https://x.com/TMachineMuseum" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="static/assets/icons/x.svg" alt="" aria-hidden="true"><span>X / Twitter</span></a>
           </nav>
         </aside>
